@@ -1,0 +1,297 @@
+#LyX 1.6.6.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass paper
+\begin_preamble
+\def\pa{\partial}
+\def\r{\textbf{r}}
+\def\k{\textbf{k}}
+\def\q{\textbf{q}}
+\def\p{\textbf{p}}
+\def\R{\textbf{R}}
+\def\s{\sigma}
+\def\u{\uparrow}
+\def\d{\downarrow}
+\end_preamble
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 0.5in
+\topmargin 0.5in
+\rightmargin 0.5in
+\bottommargin 1.2in
+\headsep 0.2in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Thermodynamic properties of cavity-assisted many-body atomic systems
+\end_layout
+
+\begin_layout Author
+Lin Dong, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We consider an ensemble of 
+\begin_inset Formula $N$
+\end_inset
+
+ two-level atoms coupled by two photon Raman transition, and atoms are placed
+ in a cavity.
+ Atoms and photons are expected to interact in a highly nonlinear fashion,
+ though atom themselves are considered non-interacting.
+ We don't consider cavity pump and decay in this work.
+\end_layout
+
+\begin_layout Standard
+Using bare atomic psedo-spin operater 
+\begin_inset Formula $\Psi_{\sigma}({\bf r})$
+\end_inset
+
+ and photon field operater 
+\begin_inset Formula $c$
+\end_inset
+
+ (without explicit time dependence), we can write the atom-cavity Hamiltonian
+ as, 
+\begin_inset Formula \begin{eqnarray}
+H & = & \sum_{j}\sum_{\sigma}\int d{\bf r}\left[\Psi_{j\sigma}^{\dagger}({\bf r})\left(\frac{\hbar^{2}\hat{{\bf k}}^{2}}{2m}+\epsilon_{\sigma}^{0}\right)\Psi_{j\sigma}({\bf r})\right]\nonumber \\
+ & + & \frac{\Omega}{2}\sum_{j}\int d{\bf r}e^{2i\hbar k_{r}z}\Psi_{j\uparrow}^{\dagger}({\bf r})\Psi_{j\downarrow}({\bf r})ce^{-i\omega_{R}t}\nonumber \\
+ & + & \frac{\Omega}{2}\sum_{j}\int d{\bf r}e^{-2i\hbar k_{r}z}c^{\dagger}\Psi_{j\downarrow}^{\dagger}({\bf r})\Psi_{j\uparrow}({\bf r})e^{+i\omega_{R}t}\nonumber \\
+ & + & \hbar\omega_{c}c^{\dagger}c\end{eqnarray}
+
+\end_inset
+
+We work in rotating frame 
+\begin_inset Formula $\tilde{c}=ce^{-i\omega_{R}t}$
+\end_inset
+
+ and gauge transformation 
+\begin_inset Formula $\tilde{\psi}_{j\uparrow}=\Psi_{j\uparrow}e^{-i\hbar k_{r}z}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{\psi}_{j\downarrow}=\Psi_{j\downarrow}e^{+i\hbar k_{r}z}$
+\end_inset
+
+ .
+ After unitary transformation of origional Hamiltonian, we can write 
+\begin_inset Formula \begin{eqnarray}
+H & = & \sum_{j}\int d{\bf r}\left(\begin{array}{cc}
+\tilde{\psi}_{j\uparrow}^{\dagger}({\bf r}) & \tilde{\psi}_{j\downarrow}^{\dagger}({\bf r})\end{array}\right)\left[\frac{\hbar^{2}\hat{{\bf k}}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}\hat{k_{z}}\sigma_{jz}+\delta\sigma_{jz}\right]\left(\begin{array}{c}
+\tilde{\psi}_{j\uparrow}({\bf r})\\
+\tilde{\psi}_{j\downarrow}({\bf r})\end{array}\right)\nonumber \\
+ & + & \sum_{j}\int d{\bf r}\frac{\Omega}{2}\tilde{\psi}_{j\uparrow}^{\dagger}({\bf r})\tilde{\psi}_{j\downarrow}({\bf r})\tilde{c}+\sum_{j}\int d{\bf r}\frac{\Omega}{2}\tilde{c}^{\dagger}\tilde{\psi}_{j\downarrow}^{\dagger}({\bf r})\tilde{\psi}_{j\uparrow}({\bf r})+\omega_{c}\tilde{c}^{\dagger}\tilde{c}\label{eq:H2}\end{eqnarray}
+
+\end_inset
+
+where we have neglected constant energy 
+\begin_inset Formula $\frac{\hbar^{2}k_{r}^{2}}{2m}$
+\end_inset
+
+ and incorprated energy shift of two-photon detunning into 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+ From now on, we drop tilde symbol and set 
+\begin_inset Formula $\hbar=m=1$
+\end_inset
+
+.
+ Writing the operator in momentum space, we write 
+\begin_inset Formula $\tilde{\psi}_{j\sigma}({\bf r})=\frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}e^{i{\bf k}_{j}\cdot{\bf r}}\hat{\psi}_{j\sigma}$
+\end_inset
+
+ and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:H2"
+
+\end_inset
+
+ is reduced to,
+\begin_inset Formula \begin{eqnarray}
+H & = & \omega_{c}\tilde{c}^{\dagger}\tilde{c}+\sum_{j}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\left[(\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}k_{jz}+\delta)\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\uparrow}+(\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}-\frac{\hbar^{2}}{m}k_{r}k_{jz}-\delta)\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\downarrow}\right]+\sum_{j}\frac{\Omega}{2}(\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\downarrow}\tilde{c}+\tilde{c}^{\dagger}\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\uparrow})\label{eq:H4}\end{eqnarray}
+
+\end_inset
+
+The thermodynamic functions can be calculated from the canonical partition
+ function, 
+\begin_inset Formula $Z(N,T)=\text{Tr}[e^{-\beta H}]$
+\end_inset
+
+.
+ A convenient basis to calculate the trace of the partition function is
+ the Glauber's coherent state 
+\begin_inset Formula $|\alpha\rangle$
+\end_inset
+
+ for the photon field, then we have
+\begin_inset Formula \begin{equation}
+Z(N,T)=\sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}\langle k_{1}s_{1};...;k_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|k_{1}s_{1};...;k_{N}s_{N}\rangle\label{eq:partitionZ}\end{equation}
+
+\end_inset
+
+where atomic field is denoted by atom index 
+\begin_inset Formula $j$
+\end_inset
+
+ and momentum 
+\begin_inset Formula ${\bf k}$
+\end_inset
+
+ and spin 
+\begin_inset Formula $\sigma=\uparrow,\downarrow$
+\end_inset
+
+.
+ It follows then that the expectation value becomes,
+\begin_inset Formula \begin{equation}
+\langle\alpha|e^{-\beta H}|\alpha\rangle=\exp\left\{ -\beta\omega_{c}\alpha^{\ast}\alpha-\beta\sum_{j}\left(h_{j}^{(1)}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\uparrow}+h_{j}^{(2)}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\downarrow}+\frac{\Omega}{2}(\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\downarrow}\alpha+\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\uparrow}\alpha^{\ast})\right)\right\} \end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $h_{j}^{(1)}({\bf k})=\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}k_{jz}+\delta$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{j}^{(2)}({\bf k})=\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}-\frac{\hbar^{2}}{m}k_{r}k_{jz}-\delta$
+\end_inset
+
+.
+ We further denote 
+\begin_inset Formula \begin{equation}
+h_{j}({\bf k})=h_{j}^{(1)}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\uparrow}+h_{j}^{(2)}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\downarrow}+\frac{\Omega}{2}(\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\downarrow}\alpha+\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\uparrow}\alpha^{\ast})\end{equation}
+
+\end_inset
+
+ and using the property 
+\begin_inset Formula $[h_{i},h_{j}]=0$
+\end_inset
+
+, we can reduce integrand of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:partitionZ"
+
+\end_inset
+
+ to 
+\begin_inset Formula \begin{eqnarray}
+\langle k_{1}s_{1};...;k_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|k_{1}s_{1};...;k_{N}s_{N}\rangle & = & e^{-\beta|\alpha|^{2}}\langle k_{1}s_{1};...;k_{N}s_{N}|e^{-\beta\sum_{j=1}^{N}h_{j}({\bf k})}|k_{1}s_{1};...;k_{N}s_{N}\rangle\\
+ & = & e^{-\beta|\alpha|^{2}}\langle k_{1}s_{1};...;k_{N}s_{N}|\prod_{j=1}^{N}e^{-\beta h_{j}({\bf k})}|k_{1}s_{1};...;k_{N}s_{N}\rangle\\
+ & = & e^{-\beta|\alpha|^{2}}\prod_{j=1}^{N}\langle k_{j}s_{j}|e^{-\beta h_{j}({\bf k})}|k_{j}s_{j}\rangle\label{eq:reduced}\end{eqnarray}
+
+\end_inset
+
+From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:partitionZ"
+
+\end_inset
+
+ and Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reduced"
+
+\end_inset
+
+, we have
+\begin_inset Formula \begin{eqnarray}
+Z(N,T) & = & \sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left(\prod_{j=1}^{N}\langle k_{j}s_{j}|e^{-\beta h_{j}({\bf k})}|k_{j}s_{j}\rangle\right)\\
+ & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left\{ \frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\text{Tr}\exp\left[-\beta\left(\begin{array}{cc}
+h_{j}^{(1)}({\bf k}) & \frac{\Omega}{2}\alpha\\
+\frac{\Omega}{2}\alpha^{\ast} & h_{j}^{(2)}({\bf k})\end{array}\right)\right]\right\} ^{N}\label{eq:reduced2}\end{eqnarray}
+
+\end_inset
+
+The eigenvalue of the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix is given by 
+\begin_inset Formula \begin{equation}
+\epsilon_{j}^{\pm}({\bf k})=\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}\pm\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{jz}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}}\equiv\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}\pm|\mu_{j}({\bf k})|\end{equation}
+
+\end_inset
+
+Then from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:reduced2"
+
+\end_inset
+
+ we have, 
+\begin_inset Formula \begin{eqnarray}
+Z(N,T) & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\left(e^{-\beta\epsilon_{j}^{+}({\bf k})}+e^{-\beta\epsilon_{j}^{-}({\bf k})}\right)\right]^{N}\\
+ & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}\exp(-\beta\frac{\hbar^{2}{\bf k}^{2}}{2m})\left(e^{-\beta|\mu({\bf k})|}+e^{\beta|\mu({\bf k})|}\right)\right]^{N}\\
+ & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}\exp(-\beta\frac{\hbar^{2}{\bf k}^{2}}{2m})2\cosh\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}}\right]^{N}\\
+ & = & \left[\frac{V}{(2\pi)^{3}}\int dk_{x}\int dk_{y}\exp(-\beta\frac{\hbar^{2}(k_{x}^{2}+k_{y}^{2})}{2m})\right]^{N}\\
+ & \times & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left(\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}})\right)^{N}\\
+ & =\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
