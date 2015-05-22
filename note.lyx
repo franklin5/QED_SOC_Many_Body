@@ -142,13 +142,9 @@ where we have neglected constant energy
 \end_inset
 
 .
- From now on, we drop tilde symbol and set 
-\begin_inset Formula $\hbar=m=1$
-\end_inset
-
-.
+ From now on, we drop tilde symbol.
  Writing the operator in momentum space, we write 
-\begin_inset Formula $\tilde{\psi}_{j\sigma}({\bf r})=\frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}e^{i{\bf k}_{j}\cdot{\bf r}}\hat{\psi}_{j\sigma}$
+\begin_inset Formula $\tilde{\psi}_{j\sigma}({\bf r})=\frac{V}{(2\pi)^{3}}\int d{\bf k}e^{i{\bf k}\cdot{\bf r}}\hat{\psi}_{j\sigma}({\bf k})$
 \end_inset
 
  and Eq.
@@ -161,11 +157,20 @@ reference "eq:H2"
 
  is reduced to,
 \begin_inset Formula \begin{eqnarray}
-H & = & \omega_{c}\tilde{c}^{\dagger}\tilde{c}+\sum_{j}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\left[(\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}k_{jz}+\delta)\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\uparrow}+(\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}-\frac{\hbar^{2}}{m}k_{r}k_{jz}-\delta)\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\downarrow}\right]+\sum_{j}\frac{\Omega}{2}(\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\downarrow}\tilde{c}+\tilde{c}^{\dagger}\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\uparrow})\label{eq:H4}\end{eqnarray}
+H & = & \omega_{c}\tilde{c}^{\dagger}\tilde{c}+\sum_{j}\sum_{{\bf k}}\left[\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\tilde{c}+\tilde{c}^{\dagger}\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\right)\right]\label{eq:H4}\end{eqnarray}
 
 \end_inset
 
-The thermodynamic functions can be calculated from the canonical partition
+where 
+\begin_inset Formula $h_{1}({\bf k})=\frac{\hbar^{2}{\bf k}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{2}({\bf k})=\frac{\hbar^{2}{\bf k}^{2}}{2m}-\frac{\hbar^{2}}{m}k_{r}k_{z}-\delta$
+\end_inset
+
+.
+ The thermodynamic functions can be calculated from the canonical partition
  function, 
 \begin_inset Formula $Z(N,T)=\text{Tr}[e^{-\beta H}]$
 \end_inset
@@ -178,7 +183,7 @@ The thermodynamic functions can be calculated from the canonical partition
 
  for the photon field, then we have
 \begin_inset Formula \begin{equation}
-Z(N,T)=\sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}\langle k_{1}s_{1};...;k_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|k_{1}s_{1};...;k_{N}s_{N}\rangle\label{eq:partitionZ}\end{equation}
+Z(N,T)=\sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle\label{eq:partitionZ}\end{equation}
 
 \end_inset
 
@@ -197,27 +202,18 @@ where atomic field is denoted by atom index
 .
  It follows then that the expectation value becomes,
 \begin_inset Formula \begin{equation}
-\langle\alpha|e^{-\beta H}|\alpha\rangle=\exp\left\{ -\beta\omega_{c}\alpha^{\ast}\alpha-\beta\sum_{j}\left(h_{j}^{(1)}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\uparrow}+h_{j}^{(2)}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\downarrow}+\frac{\Omega}{2}(\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\downarrow}\alpha+\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\uparrow}\alpha^{\ast})\right)\right\} \end{equation}
+\langle\alpha|e^{-\beta H}|\alpha\rangle=\exp\left\{ -\beta\omega_{c}|\alpha|^{2}-\beta\sum_{j,{\bf k}}\left[\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\alpha+\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\alpha^{\ast}\right)\right]\right\} \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $h_{j}^{(1)}({\bf k})=\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}k_{jz}+\delta$
-\end_inset
-
- and 
-\begin_inset Formula $h_{j}^{(2)}({\bf k})=\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}-\frac{\hbar^{2}}{m}k_{r}k_{jz}-\delta$
-\end_inset
-
-.
- We further denote 
+We further denote 
 \begin_inset Formula \begin{equation}
-h_{j}({\bf k})=h_{j}^{(1)}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\uparrow}+h_{j}^{(2)}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\downarrow}+\frac{\Omega}{2}(\hat{\psi}_{j\uparrow}^{\dagger}\hat{\psi}_{j\downarrow}\alpha+\hat{\psi}_{j\downarrow}^{\dagger}\hat{\psi}_{j\uparrow}\alpha^{\ast})\end{equation}
+h_{j}({\bf k})=\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\alpha+\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\alpha^{\ast}\right)\end{equation}
 
 \end_inset
 
  and using the property 
-\begin_inset Formula $[h_{i},h_{j}]=0$
+\begin_inset Formula $[h_{i}({\bf k}),h_{j}({\bf k}')]=0$
 \end_inset
 
 , we can reduce integrand of Eq.
@@ -230,9 +226,9 @@ reference "eq:partitionZ"
 
  to 
 \begin_inset Formula \begin{eqnarray}
-\langle k_{1}s_{1};...;k_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|k_{1}s_{1};...;k_{N}s_{N}\rangle & = & e^{-\beta|\alpha|^{2}}\langle k_{1}s_{1};...;k_{N}s_{N}|e^{-\beta\sum_{j=1}^{N}h_{j}({\bf k})}|k_{1}s_{1};...;k_{N}s_{N}\rangle\\
- & = & e^{-\beta|\alpha|^{2}}\langle k_{1}s_{1};...;k_{N}s_{N}|\prod_{j=1}^{N}e^{-\beta h_{j}({\bf k})}|k_{1}s_{1};...;k_{N}s_{N}\rangle\\
- & = & e^{-\beta|\alpha|^{2}}\prod_{j=1}^{N}\langle k_{j}s_{j}|e^{-\beta h_{j}({\bf k})}|k_{j}s_{j}\rangle\label{eq:reduced}\end{eqnarray}
+\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle & = & e^{-\beta\omega_{c}|\alpha|^{2}}\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|e^{-\beta\sum_{j=1}^{N}\sum_{{\bf k}}h_{j}({\bf k})}|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle\\
+ & = & e^{-\beta\omega_{c}|\alpha|^{2}}\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|\prod_{j=1}^{N}\prod_{{\bf k}=-\infty}^{\infty}e^{-\beta h_{j}({\bf k})}|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle\\
+ & = & e^{-\beta\omega_{c}|\alpha|^{2}}\prod_{j=1}^{N}\langle{\bf k}_{j}s_{j}|e^{-\beta h_{j}({\bf k}_{j})}|{\bf k}_{j}s_{j}\rangle\label{eq:reduced}\end{eqnarray}
 
 \end_inset
 
@@ -254,10 +250,10 @@ reference "eq:reduced"
 
 , we have
 \begin_inset Formula \begin{eqnarray}
-Z(N,T) & = & \sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left(\prod_{j=1}^{N}\langle k_{j}s_{j}|e^{-\beta h_{j}({\bf k})}|k_{j}s_{j}\rangle\right)\\
- & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left\{ \frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\text{Tr}\exp\left[-\beta\left(\begin{array}{cc}
-h_{j}^{(1)}({\bf k}) & \frac{\Omega}{2}\alpha\\
-\frac{\Omega}{2}\alpha^{\ast} & h_{j}^{(2)}({\bf k})\end{array}\right)\right]\right\} ^{N}\label{eq:reduced2}\end{eqnarray}
+Z(N,T) & = & \sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left(\prod_{j=1}^{N}\langle k_{j}s_{j}|e^{-\beta h_{j}({\bf k}_{j})}|k_{j}s_{j}\rangle\right)\\
+ & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left\{ \frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\text{Tr}\exp\left[-\beta\left(\begin{array}{cc}
+h_{j}^{(1)}({\bf k}_{j}) & \frac{\Omega}{2}\alpha\\
+\frac{\Omega}{2}\alpha^{\ast} & h_{j}^{(2)}({\bf k}_{j})\end{array}\right)\right]\right\} ^{N}\label{eq:reduced2}\end{eqnarray}
 
 \end_inset
 
@@ -267,7 +263,7 @@ The eigenvalue of the
 
  matrix is given by 
 \begin_inset Formula \begin{equation}
-\epsilon_{j}^{\pm}({\bf k})=\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}\pm\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{jz}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}}\equiv\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}\pm|\mu_{j}({\bf k})|\end{equation}
+\epsilon_{j}^{\pm}({\bf k}_{j})=\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}\pm\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{jz}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}}\equiv\frac{\hbar^{2}{\bf k}_{j}^{2}}{2m}\pm|\mu({\bf k}_{j})|\end{equation}
 
 \end_inset
 
@@ -281,12 +277,112 @@ reference "eq:reduced2"
 
  we have, 
 \begin_inset Formula \begin{eqnarray}
-Z(N,T) & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\left(e^{-\beta\epsilon_{j}^{+}({\bf k})}+e^{-\beta\epsilon_{j}^{-}({\bf k})}\right)\right]^{N}\\
- & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}\exp(-\beta\frac{\hbar^{2}{\bf k}^{2}}{2m})\left(e^{-\beta|\mu({\bf k})|}+e^{\beta|\mu({\bf k})|}\right)\right]^{N}\\
- & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}\exp(-\beta\frac{\hbar^{2}{\bf k}^{2}}{2m})2\cosh\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}}\right]^{N}\\
+Z(N,T) & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\left(e^{-\beta\epsilon_{j}^{+}({\bf k}_{j})}+e^{-\beta\epsilon_{j}^{-}({\bf k}_{j})}\right)\right]^{N}\\
+ & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}\exp(-\beta\frac{\hbar^{2}{\bf k}^{2}}{2m})\left(e^{-\beta|\mu({\bf k})|}+e^{\beta|\mu({\bf k})|}\right)\right]^{N}\\
+ & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}\exp(-\beta\frac{\hbar^{2}{\bf k}^{2}}{2m})2\cosh\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}}\right]^{N}\\
  & = & \left[\frac{V}{(2\pi)^{3}}\int dk_{x}\int dk_{y}\exp(-\beta\frac{\hbar^{2}(k_{x}^{2}+k_{y}^{2})}{2m})\right]^{N}\\
- & \times & \int\frac{d^{2}\alpha}{\pi}e^{-\beta|\alpha|^{2}}\left(\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}})\right)^{N}\\
- & =\end{eqnarray}
+ & \times & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left(\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}})\right)^{N}\\
+ & = & \left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}2\int_{0}^{\infty}re^{-\beta\omega_{c}r^{2}}\left(\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}r^{2}})\right)^{N}dr\end{eqnarray}
+
+\end_inset
+
+In canonical ensemble and thermodynamic limit, free energy per particle
+ is given by 
+\begin_inset Formula \begin{equation}
+f(T,\Omega,\omega_{c},\delta)=-\frac{1}{\beta}\lim_{N\rightarrow\infty}\frac{\log Z(N,T)}{N}\end{equation}
+
+\end_inset
+
+ and we need to seek phase transition property by studying saddle point
+ solution to 
+\begin_inset Formula $F$
+\end_inset
+
+ energy landscapes.
+ 
+\end_layout
+
+\begin_layout Standard
+Although we could take the limit of 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+ numerically, we shall make use of Laplace's method to further reduce the
+ integrals.
+ We denote, 
+\begin_inset Formula \begin{equation}
+\mathcal{S}=\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}\frac{|\alpha|^{2}}{N}})\end{equation}
+
+\end_inset
+
+ Then, partition function is formally written as 
+\begin_inset Formula \begin{eqnarray}
+Z(N,T) & = & \left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}2\int_{0}^{\infty}re^{-N\frac{\beta\omega_{c}r^{2}}{N}}e^{N\log\mathcal{S}}dr\\
+ & = & N\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}\int_{0}^{\infty}dy\exp\left\{ N\left[-\beta\omega_{c}y+\log\mathcal{S}\right]\right\} \end{eqnarray}
+
+\end_inset
+
+where we have denoted 
+\begin_inset Formula $y=\frac{|\alpha|^{2}}{N}$
+\end_inset
+
+.
+ By Laplace's method, the integral is given by
+\begin_inset Formula \begin{equation}
+Z(N,T)=N\frac{\mathcal{C}}{\sqrt{N}}\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}\max_{0\leq y\leq\infty}\exp\left\{ N\phi(y)\right\} \end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi(y)=-\beta\omega_{c}y+\log\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\right)$
+\end_inset
+
+.
+ Then
+\begin_inset Formula \begin{equation}
+\phi'(y)=-\beta\omega_{c}+\frac{\beta\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\right)\frac{\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}}}{\mathcal{S}}\end{equation}
+
+\end_inset
+
+Putting 
+\begin_inset Formula $\phi'(y)=0$
+\end_inset
+
+ we get an integral equation of 
+\begin_inset Formula $\eta=\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}$
+\end_inset
+
+, 
+\begin_inset Formula \begin{equation}
+\omega_{c}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\eta)=\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh(\beta\eta)\frac{\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}}{\eta}\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $k_{z}$
+\end_inset
+
+ is yet to be integrated out.
+ However, numerical evidence show that 
+\begin_inset Formula $\phi(y)$
+\end_inset
+
+ is a monotonically decreasing function of 
+\begin_inset Formula $y$
+\end_inset
+
+ and maximum is taken at 
+\begin_inset Formula $y=0$
+\end_inset
+
+ which is 
+\begin_inset Formula $\phi(0)=\log\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh\left(\beta(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta)\right)=\log\left(2\sqrt{2\pi/\beta}e^{\beta k_{r}^{2}/2}\cosh(\beta\delta)\right)$
+\end_inset
+
+ .
+ Then, 
+\begin_inset Formula \begin{equation}
+-\beta f(T,\Omega,\omega_{c},\delta)\propto\end{equation}
 
 \end_inset
 
