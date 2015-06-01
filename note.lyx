@@ -1,4 +1,4 @@
-#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.6.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -102,11 +102,8 @@ Using bare atomic psedo-spin operater
 
  (without explicit time dependence), we can write the atom-cavity Hamiltonian
  as, 
-\begin_inset Formula \begin{eqnarray}
-H & = & \sum_{j}\sum_{\sigma}\int d{\bf r}\left[\Psi_{j\sigma}^{\dagger}({\bf r})\left(\frac{\hbar^{2}\hat{{\bf k}}^{2}}{2m}+\epsilon_{\sigma}^{0}\right)\Psi_{j\sigma}({\bf r})\right]\nonumber \\
- & + & \frac{\Omega}{2}\sum_{j}\int d{\bf r}e^{2i\hbar k_{r}z}\Psi_{j\uparrow}^{\dagger}({\bf r})\Psi_{j\downarrow}({\bf r})ce^{-i\omega_{R}t}\nonumber \\
- & + & \frac{\Omega}{2}\sum_{j}\int d{\bf r}e^{-2i\hbar k_{r}z}c^{\dagger}\Psi_{j\downarrow}^{\dagger}({\bf r})\Psi_{j\uparrow}({\bf r})e^{+i\omega_{R}t}\nonumber \\
- & + & \hbar\omega_{c}c^{\dagger}c\end{eqnarray}
+\begin_inset Formula \begin{eqnarray*}
+H & = & \sum_{j=1}^{N}\sum_{\sigma}\int d{\bf r}\left[\Psi_{j\sigma}^{\dagger}({\bf r})\left(\frac{\hbar^{2}\hat{{\bf k}}^{2}}{2m}+\epsilon_{\sigma}^{0}\right)\Psi_{j\sigma}({\bf r})\right]+\frac{\Omega}{2}\sum_{j=1}^{N}\int d{\bf r}\left(e^{2i\hbar k_{r}z}\Psi_{j\uparrow}^{\dagger}({\bf r})\Psi_{j\downarrow}({\bf r})ce^{-i\omega_{R}t}+c.c\right)+\hbar\omega_{c}c^{\dagger}c\end{eqnarray*}
 
 \end_inset
 
@@ -125,11 +122,10 @@ We work in rotating frame
  .
  After unitary transformation of origional Hamiltonian, we can write 
 \begin_inset Formula \begin{eqnarray}
-H & = & \sum_{j}\int d{\bf r}\left(\begin{array}{cc}
+H & = & \sum_{j=1}^{N}\int d{\bf r}\left[\left(\begin{array}{cc}
 \tilde{\psi}_{j\uparrow}^{\dagger}({\bf r}) & \tilde{\psi}_{j\downarrow}^{\dagger}({\bf r})\end{array}\right)\left[\frac{\hbar^{2}\hat{{\bf k}}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}\hat{k_{z}}\sigma_{jz}+\delta\sigma_{jz}\right]\left(\begin{array}{c}
 \tilde{\psi}_{j\uparrow}({\bf r})\\
-\tilde{\psi}_{j\downarrow}({\bf r})\end{array}\right)\nonumber \\
- & + & \sum_{j}\int d{\bf r}\frac{\Omega}{2}\tilde{\psi}_{j\uparrow}^{\dagger}({\bf r})\tilde{\psi}_{j\downarrow}({\bf r})\tilde{c}+\sum_{j}\int d{\bf r}\frac{\Omega}{2}\tilde{c}^{\dagger}\tilde{\psi}_{j\downarrow}^{\dagger}({\bf r})\tilde{\psi}_{j\uparrow}({\bf r})+\omega_{c}\tilde{c}^{\dagger}\tilde{c}\label{eq:H2}\end{eqnarray}
+\tilde{\psi}_{j\downarrow}({\bf r})\end{array}\right)+\frac{\Omega}{2}\tilde{\psi}_{j\uparrow}^{\dagger}({\bf r})\tilde{\psi}_{j\downarrow}({\bf r})\tilde{c}+c.c\right]+\omega_{c}\tilde{c}^{\dagger}\tilde{c}\label{eq:H2-1}\end{eqnarray}
 
 \end_inset
 
@@ -151,13 +147,13 @@ where we have neglected constant energy
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:H2"
+reference "eq:H2-1"
 
 \end_inset
 
  is reduced to,
 \begin_inset Formula \begin{eqnarray}
-H & = & \omega_{c}\tilde{c}^{\dagger}\tilde{c}+\sum_{j}\sum_{{\bf k}}\left[\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\tilde{c}+\tilde{c}^{\dagger}\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\right)\right]\label{eq:H4}\end{eqnarray}
+H & = & \omega_{c}\tilde{c}^{\dagger}\tilde{c}+\sum_{j=1}^{N}\sum_{{\bf k}}\left[\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\tilde{c}+\tilde{c}^{\dagger}\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\right)\right]\label{eq:H4}\end{eqnarray}
 
 \end_inset
 
@@ -202,11 +198,11 @@ where atomic field is denoted by atom index
 .
  It follows then that the expectation value becomes,
 \begin_inset Formula \begin{equation}
-\langle\alpha|e^{-\beta H}|\alpha\rangle=\exp\left\{ -\beta\omega_{c}|\alpha|^{2}-\beta\sum_{j,{\bf k}}\left[\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\alpha+\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\alpha^{\ast}\right)\right]\right\} \end{equation}
+\langle\alpha|e^{-\beta H}|\alpha\rangle=\exp\left\{ -\beta\omega_{c}|\alpha|^{2}-\beta\sum_{j=1}^{N}\sum_{{\bf k}}h_{j}({\bf k})\right\} \end{equation}
 
 \end_inset
 
-We further denote 
+
 \begin_inset Formula \begin{equation}
 h_{j}({\bf k})=\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\alpha+\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\alpha^{\ast}\right)\end{equation}
 
@@ -250,14 +246,15 @@ reference "eq:reduced"
 
 , we have
 \begin_inset Formula \begin{eqnarray}
-Z(N,T) & = & \sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left(\prod_{j=1}^{N}\langle k_{j}s_{j}|e^{-\beta h_{j}({\bf k}_{j})}|k_{j}s_{j}\rangle\right)\\
- & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left\{ \frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\text{Tr}\exp\left[-\beta\left(\begin{array}{cc}
-h_{j}^{(1)}({\bf k}_{j}) & \frac{\Omega}{2}\alpha\\
-\frac{\Omega}{2}\alpha^{\ast} & h_{j}^{(2)}({\bf k}_{j})\end{array}\right)\right]\right\} ^{N}\label{eq:reduced2}\end{eqnarray}
+Z(N,T) & = & \sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left(\prod_{j=1}^{N}\langle{\bf k}_{j}s_{j}|e^{-\beta h_{j}({\bf k}_{j})}|{\bf k}_{j}s_{j}\rangle\right)\\
+ & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left\{ \frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\text{Tr}_{\sigma}\exp\left[-\beta\left(\begin{array}{cc}
+h_{1}({\bf k}_{j}) & \frac{\Omega}{2}\alpha\\
+\frac{\Omega}{2}\alpha^{\ast} & h_{2}({\bf k}_{j})\end{array}\right)\right]\right\} ^{N}\label{eq:reduced2}\end{eqnarray}
 
 \end_inset
 
-The eigenvalue of the 
+where the Trace is only for spin degrees of freedom.
+ The eigenvalue of the 
 \begin_inset Formula $2\times2$
 \end_inset
 
@@ -282,7 +279,7 @@ Z(N,T) & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left[\f
  & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left[\frac{V}{(2\pi)^{3}}\int d{\bf k}\exp(-\beta\frac{\hbar^{2}{\bf k}^{2}}{2m})2\cosh\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}}\right]^{N}\\
  & = & \left[\frac{V}{(2\pi)^{3}}\int dk_{x}\int dk_{y}\exp(-\beta\frac{\hbar^{2}(k_{x}^{2}+k_{y}^{2})}{2m})\right]^{N}\\
  & \times & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\omega_{c}|\alpha|^{2}}\left(\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}|\alpha|^{2}})\right)^{N}\\
- & = & \left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}2\int_{0}^{\infty}re^{-\beta\omega_{c}r^{2}}\left(\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}r^{2}})\right)^{N}dr\end{eqnarray}
+ & = & \left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}2\int_{0}^{\infty}re^{-\beta\omega_{c}r^{2}}dr\left(\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\Omega}{2}\right)^{2}r^{2}})\right)^{N}\end{eqnarray}
 
 \end_inset
 
@@ -309,7 +306,42 @@ Although we could take the limit of
 
  numerically, we shall make use of Laplace's method to further reduce the
  integrals.
- We denote, 
+ The formal statement of Lapace's method is:
+\end_layout
+
+\begin_layout Standard
+Assume that 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is a twice differentiable function on 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ with 
+\begin_inset Formula $x_{0}\in[a,b]$
+\end_inset
+
+ the unique point such that 
+\begin_inset Formula $f(x_{0})=\max_{[a,b]}f(x)$
+\end_inset
+
+.
+ Assume additionally that 
+\begin_inset Formula $f''(x_{0})<0$
+\end_inset
+
+, then
+\begin_inset Formula \begin{equation}
+\lim_{N\rightarrow+\infty}\left(\frac{\int_{a}^{b}e^{Nf(x)}dx}{e^{Nf(x_{0})}\sqrt{\frac{2\pi}{-Nf''(x_{0})}}}\right)=1\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We denote, 
 \begin_inset Formula \begin{equation}
 \mathcal{S}=\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}\frac{|\alpha|^{2}}{N}})\end{equation}
 
@@ -329,12 +361,16 @@ where we have denoted
 .
  By Laplace's method, the integral is given by
 \begin_inset Formula \begin{equation}
-Z(N,T)=N\frac{\mathcal{C}}{\sqrt{N}}\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}\max_{0\leq y\leq\infty}\exp\left\{ N\phi(y)\right\} \end{equation}
+Z(N,T)=N\frac{1}{\sqrt{N}}\sqrt{\frac{2\pi}{-\phi''(y_{0})}}\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}\max_{0\leq y\leq\infty}\exp\left\{ N\phi(y)\right\} \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\phi(y)=-\beta\omega_{c}y+\log\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\right)$
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ is the point that gives maximum and 
+\begin_inset Formula $\phi(y)=-\beta\omega_{c}y+\log\mathcal{S}$
 \end_inset
 
 .
@@ -372,7 +408,7 @@ where
 \end_inset
 
  and maximum is taken at 
-\begin_inset Formula $y=0$
+\begin_inset Formula $y_{0}=0$
 \end_inset
 
  which is 
