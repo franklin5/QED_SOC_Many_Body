@@ -388,7 +388,17 @@ Putting
 \begin_inset Formula $\eta=\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}$
 \end_inset
 
-, 
+, and we shall denote 
+\begin_inset Formula $\tilde{\Omega}=\sqrt{N}\Omega$
+\end_inset
+
+ is the Tavis-Cummings coupling constant, an enhancement of coupling strength
+ which scales as 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+.
+ 
 \begin_inset Formula \begin{equation}
 \omega_{c}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\eta)=\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh(\beta\eta)\frac{\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}}{\eta}\end{equation}
 
@@ -399,7 +409,12 @@ where
 \end_inset
 
  is yet to be integrated out.
- However, numerical evidence show that 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+However, numerical evidence show that 
 \begin_inset Formula $\phi(y)$
 \end_inset
 
@@ -416,9 +431,40 @@ where
 \end_inset
 
  .
+\end_layout
+
+\end_inset
+
  Then, 
 \begin_inset Formula \begin{equation}
--\beta f(T,\Omega,\omega_{c},\delta)\propto\phi(0)\end{equation}
+-\beta f(T,\Omega,\omega_{c},\delta)\propto\phi(y_{0})\end{equation}
+
+\end_inset
+
+Second order derivative can be checked straightforwardly, 
+\begin_inset Formula \begin{equation}
+\phi''(y)=\frac{\frac{\partial Q}{\partial y}\mathcal{S}-Q^{2}}{\mathcal{S}^{2}}\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $Q\equiv\frac{\partial\mathcal{S}}{\partial y}=\beta\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\right)\frac{\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}}$
+\end_inset
+
+ and 
+\begin_inset Formula \begin{eqnarray}
+\frac{\partial Q}{\partial y} & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\partial_{y}\left(\frac{\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\right)}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}}\right)\nonumber \\
+ & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\right)^{4}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\frac{\frac{\beta}{2}\cosh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\right)-\frac{\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\right)}{2\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}}}{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\right)^{2}y}\\
+ & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\right)^{4}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\frac{\frac{\beta}{2}\cosh(\beta\eta)-\frac{\sinh(\beta\eta)}{2\eta}}{\eta^{2}}\end{eqnarray}
+
+\end_inset
+
+With the optimality condition computed, it is helpful to compute the average
+ photon number,
+\begin_inset Formula \begin{eqnarray}
+\langle\frac{a^{\dagger}a}{N}\rangle & = & \frac{\text{Tr}[a^{\dagger}ae^{-\beta H}/N]}{Z(N,T)}\\
+ & = & \frac{|\alpha|^{2}}{N}\\
+ & = & y_{0}\end{eqnarray}
 
 \end_inset
 
