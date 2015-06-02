@@ -23,35 +23,38 @@ clear photon
 load phase_diagram_kr_0.mat
 photon0 = photon;
 clear photon
+load Dicke.mat
+photonD = photon;
+clear photon
 %
-Tckr = zeros(1,length(aO));
-for nO = 1:length(aO)
-    OmegaTilde = aO(nO);
-    for nT = 1:length(aT)
-        T = aT(nT);
-        if photonkr(nO,nT)>0
-            Tckr(nO) = T;
-            break;
-        end
-    end
-end           
-%
-Tck0 = zeros(1,length(aO));
-for nO = 1:length(aO)
-    OmegaTilde = aO(nO);
-    for nT = 1:length(aT)
-        T = aT(nT);
-        if photon0(nO,nT)>0
-            Tck0(nO) = T;
-            break;
-        end
-    end
-end
-figure(1)
-plot(aO,Tckr,'r--',aO,Tck0,'b')
-xlabel('\Omega_c')
-ylabel('T_c')
-legend('k_r=0.22','k_r=0')
+% Tckr = zeros(1,length(aO));
+% for nO = 1:length(aO)
+%     OmegaTilde = aO(nO);
+%     for nT = 1:length(aT)
+%         T = aT(nT);
+%         if photonkr(nO,nT)>0
+%             Tckr(nO) = T;
+%             break;
+%         end
+%     end
+% end           
+% %
+% Tck0 = zeros(1,length(aO));
+% for nO = 1:length(aO)
+%     OmegaTilde = aO(nO);
+%     for nT = 1:length(aT)
+%         T = aT(nT);
+%         if photon0(nO,nT)>0
+%             Tck0(nO) = T;
+%             break;
+%         end
+%     end
+% end
+% figure(1)
+% plot(aO,Tckr,'r--',aO,Tck0,'b')
+% xlabel('\Omega_c')
+% ylabel('T_c')
+% legend('k_r=0.22','k_r=0')
 %
 Ockr = zeros(1,length(aT));
 for nT = 1:length(aT)
@@ -76,8 +79,21 @@ for nT = 1:length(aT)
         end
     end
 end 
+OckD = 100*ones(1,length(aT));
+for nT = 1:length(aT)
+    T = aT(nT);
+    for nO = 1:length(aO)
+        OmegaTilde = aO(nO);
+        if photonD(nO,nT)>0
+            OckD(nT) = OmegaTilde;
+            break;
+        end
+    end
+end 
 figure(2)
-plot(aT,Ockr,'r--',aT,Ock0,'b')
-xlabel('T_c')
-ylabel('\Omega_c')
-legend('k_r=0.22','k_r=0')
+set(gca,'fontsize',16)
+plot(aT,Ockr,'r--',aT,Ock0,'b',aT,OckD,'k.')
+xlabel('k_B T_c')
+ylabel('\Omega_c/\omega')
+legend('k_r=0.22','k_r=0','Dicke')
+axis([0 max(aT) 0 3])

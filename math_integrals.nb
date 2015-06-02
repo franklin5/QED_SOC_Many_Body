@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10705,        319]
+NotebookDataLength[     10702,        319]
 NotebookOptionsPosition[      9645,        278]
-NotebookOutlinePosition[     10106,        296]
-CellTagsIndexPosition[     10063,        293]
+NotebookOutlinePosition[     10101,        296]
+CellTagsIndexPosition[     10058,        293]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -276,8 +276,8 @@ Cell[BoxData[
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.641160088682065*^9, 3.6411600948136587`*^9}}]
 },
-WindowSize->{1188, 762},
-WindowMargins->{{-1257, Automatic}, {Automatic, 123}},
+WindowSize->{1188, 751},
+WindowMargins->{{Automatic, 40}, {Automatic, 0}},
 Magnification:>FEPrivate`If[
   FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
@@ -314,13 +314,13 @@ Cell[4660, 144, 161, 2, 43, "Output"]
 Cell[4836, 149, 68, 1, 43, "Input"],
 Cell[CellGroupData[{
 Cell[4929, 154, 1137, 31, 69, "Input"],
-Cell[6069, 187, 2364, 44, 348, "Output"]
+Cell[6069, 187, 2364, 44, 350, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8470, 236, 551, 18, 69, "Input"],
-Cell[9024, 256, 508, 16, 89, "Output"]
+Cell[8470, 236, 551, 18, 103, "Input"],
+Cell[9024, 256, 508, 16, 133, "Output"]
 }, Open  ]],
-Cell[9547, 275, 94, 1, 43, "Input"]
+Cell[9547, 275, 94, 1, 64, "Input"]
 }
 ]
 *)
