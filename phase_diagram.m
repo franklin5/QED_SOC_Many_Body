@@ -7,8 +7,8 @@ clf
 % units are taken to be \hbar=m=k_B=1
 kr = 0.22;
 delta = 0.2;
-aO = 0.01:0.1:5;
-aT = 0.01:0.01:0.5; 
+aO = 0.01:0.03:3;
+aT = 0.01:0.01:1; 
 for nO = 1:length(aO)
     OmegaTilde = aO(nO);
 omega_c = 1;
@@ -51,4 +51,6 @@ mesh(aO,aT,photon')
 xlabel('\Omega')
 ylabel('T')
 zlabel('photon number')
-%save phase_diagram.mat
+axis([0 max(aO) 0 max(aT) 0 max(max(photon))])
+ save phase_diagram.mat
+% save phase_diagram_kr_0.mat

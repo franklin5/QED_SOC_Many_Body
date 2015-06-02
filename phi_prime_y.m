@@ -4,13 +4,13 @@ clc
 %close all
 clf
 % units are taken to be \hbar=m=k_B=1
-kr = 0.22;
+kr = 0;
 delta = 0.2;
-OmegaTilde = 2.5;
- for OmegaTilde=0:0.1:5
+OmegaTilde = 1.5;
+% for OmegaTilde=0:0.1:5
 omega_c = 1;
 T = 0.1;
-% for T = 0.01:0.01:0.5 
+ for T = 0.01:0.01:0.5
 beta = 1/T;
 
 maxKZ = 10;
@@ -37,29 +37,29 @@ phi = @(y) -beta*omega_c*y+log(S(y));
 % xlabel('y')
 % ylabel('\phi(y)')
 % title(['d^2\phi(y)/d y^2 =', num2str(SecondOrder(y0)) ])
-figure(2)
-hold on
-if y0>0
-    scatter(OmegaTilde,y0)
-else
-    scatter(OmegaTilde,0)
-end
-hold off
-end
-set(gca,'fontsize',16)
-xlabel('Tavis cummings \Omega')
-ylabel('average photon number')
-title(['k_BT = ',num2str(T)])
-% figure(3)
+% figure(2)
 % hold on
 % if y0>0
-%     scatter(T,y0)
+%     scatter(OmegaTilde,y0)
 % else
-%     scatter(T,0)
+%     scatter(OmegaTilde,0)
 % end
 % hold off
 % end
 % set(gca,'fontsize',16)
-% xlabel('Temperature')
+% xlabel('Tavis cummings \Omega')
 % ylabel('average photon number')
-% title(['Tavis Cummings \Omega = ',num2str(OmegaTilde)])
+% title(['k_BT = ',num2str(T)])
+figure(3)
+hold on
+if y0>0
+    scatter(T,y0)
+else
+    scatter(T,0)
+end
+hold off
+end
+set(gca,'fontsize',16)
+xlabel('Temperature')
+ylabel('average photon number')
+title(['Tavis Cummings \Omega = ',num2str(OmegaTilde)])
