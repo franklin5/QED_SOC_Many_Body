@@ -56,7 +56,7 @@ clear photon
 % ylabel('T_c')
 % legend('k_r=0.22','k_r=0')
 %
-Ockr = zeros(1,length(aT));
+Ockr = 100*ones(1,length(aT));
 for nT = 1:length(aT)
     T = aT(nT);
     for nO = 1:length(aO)
@@ -92,7 +92,7 @@ for nT = 1:length(aT)
 end 
 figure(2)
 set(gca,'fontsize',16)
-plot(aT,Ockr,'r--',aT,Ock0,'b',aT,OckD,'k.')
+plot(aT,Ockr,'ro',aT,Ock0,'b',aT,OckD,'k.')
 xlabel('k_B T_c')
 ylabel('\Omega_c/\omega')
 legend('k_r=0.22','k_r=0','Dicke')

@@ -58,5 +58,5 @@ axis([0 max(aO) 0 max(aT)])
 colorbar
 colormap(hot)
 title('photon number')
-% save phase_diagram.mat
+save phase_diagram.mat
 % save phase_diagram_kr_0.mat
