@@ -649,7 +649,7 @@ reference "eq:partitionZ_Dicke"
 \end_inset
 
 , it is easy to see that the max is taken at 
-\begin_inset Formula $\frac{\delta_{R}\delta}{(\tilde{\Omega}/4)^{2}}\eta=\tanh(\beta\delta\eta)$
+\begin_inset Formula $\frac{\delta_{R}\delta}{\tilde{\Omega}^{2}/8}\eta=\tanh(\beta\delta\eta)$
 \end_inset
 
  where 
@@ -658,11 +658,11 @@ reference "eq:partitionZ_Dicke"
 
 .
  If 
-\begin_inset Formula $\tilde{\Omega}^{2}<16\delta_{R}\delta$
+\begin_inset Formula $\tilde{\Omega}^{2}<8\delta_{R}\delta$
 \end_inset
 
 , there is no phase transition even at zero temperature; however, if 
-\begin_inset Formula $\tilde{\Omega}^{2}\geq16\delta_{R}\delta$
+\begin_inset Formula $\tilde{\Omega}^{2}\geq8\delta_{R}\delta$
 \end_inset
 
 , there is a critical temperature 
@@ -670,7 +670,7 @@ reference "eq:partitionZ_Dicke"
 \end_inset
 
  which is given by 
-\begin_inset Formula $\frac{\delta_{R}\delta}{(\tilde{\Omega}/4)^{2}}=\tanh(\frac{\delta}{k_{B}T_{c}})$
+\begin_inset Formula $\frac{\delta_{R}\delta}{\tilde{\Omega}^{2}/8}=\tanh(\frac{\delta}{k_{B}T_{c}})$
 \end_inset
 
 .
@@ -683,7 +683,7 @@ reference "eq:partitionZ_Dicke"
 \end_inset
 
  value that is determined by 
-\begin_inset Formula $\frac{\delta_{R}\delta}{(\tilde{\Omega}/4)^{2}}\sqrt{1+(\frac{\tilde{\Omega}}{2\delta})^{2}y_{0}}=\tanh(\beta\delta\sqrt{1+(\frac{\tilde{\Omega}}{2\delta})^{2}y_{0}})$
+\begin_inset Formula $\frac{\delta_{R}\delta}{\tilde{\Omega}^{2}/8}\sqrt{1+(\frac{\tilde{\Omega}}{2\delta})^{2}y_{0}}=\tanh(\beta\delta\sqrt{1+(\frac{\tilde{\Omega}}{2\delta})^{2}y_{0}})$
 \end_inset
 
 .
