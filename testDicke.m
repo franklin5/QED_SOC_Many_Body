@@ -1,4 +1,4 @@
-%% This is the program to determine the Dicke phase diagram according to the 
+%% testing testing This is the program to determine the Dicke phase diagram according to the 
 %    transedantal equation
 clear
 clc
@@ -6,7 +6,7 @@ clc
 clf
 % units are taken to be \hbar=m=k_B=1
 kr = 0.22;
-delta = 0.2;
+delta = 0.25;
 aO = 0.01:0.03:3;
 aT = 0.01:0.01:1; 
 for nO = 1:length(aO)
@@ -18,10 +18,12 @@ beta = 1/T;
 
 maxKZ = 10;
 
-eta = @(y) sqrt(1+(OmegaTilde/2/delta)^2*y);
-S = @(y) 2*cosh(beta*delta*eta(y));
-FirstOrder = @(y) -delta*omega_c/(OmegaTilde)^2*8+tanh(beta*delta*eta(y))./eta(y);
+eta = @(y) sqrt((delta).^2+(OmegaTilde/2)^2*y);
+S = @(y) 2.*cosh(beta*eta(y));
+Q = @(y) beta*sinh(beta*eta(y))*(OmegaTilde/2)^2./eta(y);
+FirstOrder = @(y) -beta*omega_c+Q(y)./S(y);
 [y0,fval]=fsolve(FirstOrder, 0.0, optimset('Display','off'));
+y0
 phi = @(y) -beta*omega_c*y+log(S(y));
 % figure(1)
 % ay = 0:0.1:1;
@@ -51,6 +53,5 @@ axis([0 max(aO) 0 max(aT)])
 colorbar
 colormap(hot)
 title('photon number')
-%save Dicke.mat
-
+% save dicke_test.mat
 
