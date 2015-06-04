@@ -23,7 +23,7 @@ clear photon
 load phase_diagram_kr_0.mat
 photon0 = photon;
 clear photon
-load Dicke.mat
+load phase_diagram_delta_0.mat
 photonD = photon;
 clear photon
 %

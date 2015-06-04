@@ -1,4 +1,4 @@
-#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.6.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -183,7 +183,7 @@ reference "eq:H2-1"
 
  is reduced to,
 \begin_inset Formula \begin{eqnarray}
-H & = & \delta_{R}c^{\dagger}c+\sum_{j=1}^{N}\sum_{{\bf k}}\left[\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})c+c^{\dagger}\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\right)\right]\label{eq:H4}\end{eqnarray}
+H & = & \delta_{R}c^{\dagger}c+\sum_{j=1}^{N}\sum_{{\bf k}}\left[\left(h_{1}({\bf k})|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\uparrow|+h_{2}({\bf k})|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\downarrow|\right)+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\downarrow|c+c^{\dagger}|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\uparrow|\right)\right]\label{eq:H4}\end{eqnarray}
 
 \end_inset
 
@@ -234,7 +234,7 @@ where atomic field is denoted by atom index
 
 
 \begin_inset Formula \begin{equation}
-h_{j}({\bf k})=\left(h_{1}({\bf k})\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})+h_{2}({\bf k})\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\right)+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(\hat{\psi}_{j\uparrow}^{\dagger}({\bf k})\hat{\psi}_{j\downarrow}({\bf k})\alpha+\hat{\psi}_{j\downarrow}^{\dagger}({\bf k})\hat{\psi}_{j\uparrow}({\bf k})\alpha^{\ast}\right)\end{equation}
+h_{j}({\bf k})=\left(h_{1}({\bf k})|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\uparrow|+h_{2}({\bf k})|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\downarrow|\right)+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\downarrow|c+c^{\dagger}|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\uparrow|\right)\end{equation}
 
 \end_inset
 

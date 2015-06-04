@@ -6,7 +6,7 @@ clc
 clf
 % units are taken to be \hbar=m=k_B=1
 kr = 0.22;
-delta = 0.2;
+delta = 0;
 aO = 0.01:0.03:3;
 aT = 0.01:0.01:1; 
 for nO = 1:length(aO)
@@ -60,3 +60,4 @@ colormap(hot)
 title('photon number')
 % save phase_diagram.mat
 % save phase_diagram_kr_0.mat
+save phase_diagram_delta_0.mat
