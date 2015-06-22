@@ -1,0 +1,2957 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass revtex4
+\options aps,prl,showpacs
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding latin9
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 2
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Gapless topological Fulde-Ferrell superfluidity induced by in-plane Zeeman
+ field
+\end_layout
+
+\begin_layout Author
+Hui Hu
+\begin_inset Formula $^{1}$
+\end_inset
+
+, Lin Dong
+\begin_inset Formula $^{2}$
+\end_inset
+
+, Ye Cao
+\begin_inset Formula $^{1}$
+\end_inset
+
+, Han Pu
+\begin_inset Formula $^{2}$
+\end_inset
+
+, and Xia-Ji Liu
+\begin_inset Formula $^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author Email
+xiajiliu@swin.edu.au
+\end_layout
+
+\begin_layout Affiliation
+\begin_inset Formula $^{1}$
+\end_inset
+
+Centre for Quantum and Optical Science, Swinburne University of Technology,
+ Melbourne 3122, Australia
+\end_layout
+
+\begin_layout Affiliation
+\begin_inset Formula $^{2}$
+\end_inset
+
+Department of Physics and Astronomy, and Rice Quantum Institute, Rice University
+, Houston, TX 77251, USA
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Topological superfluids are recently discovered quantum matters that host
+ topologically protected gapless edge states known as Majorana fermions
+ - exotic quantum particles that act as their own anti-particles and obey
+ non-Abelian statistics.
+ Their realizations are believed to lie at the heart of future technologies
+ such as fault-tolerant quantum computation.
+ To date, the most efficient scheme to create topological superfluids and
+ Majorana fermions is based on the Sau-Lutchyn-Tewari-Das Sarma model with
+ a Rashba-type spin-orbit coupling on the 
+\shape italic
+x-y
+\shape default
+ plane and a large out-of-plane (perpendicular) Zeeman field along the 
+\shape italic
+z
+\shape default
+-direction.
+ Here we propose an alternative setup, where the topological superfluid
+ phase is driven by applying an in-plane Zeeman field.
+ This scheme offers a number of new features, notably Cooper pairings at
+ finite centre-of-mass momentum (i.e., Fulde-Ferrell pairing) and gapless
+ excitations in the bulk.
+ As a result, a novel gapless topological quantum matter with inhomogeneous
+ pairing order parameter appears.
+ It features unidirected Majorana surface states at its boundaries, which
+ propagate in the same direction on opposite surfaces and connect two Weyl
+ nodes in the bulk.
+ We demonstrate the emergence of such an exotic topological matter and the
+ associated Majorana fermions in spin-orbit coupled atomic Fermi gases and
+ determine its parameter space.
+ The implementation of our scheme in semiconductor/superconductor heterostructur
+es is briefly discussed.
+ 
+\end_layout
+
+\begin_layout PACS
+05.30.Fk, 03.75.Hh, 03.75.Ss, 67.85.-d
+\end_layout
+
+\begin_layout Standard
+The possibility of realizing topological superfluids and manipulating Majorana
+ fermions in solid-state and ultracold atomic systems is currently a topic
+ of great theoretical and experimental interest 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hasan2010,Qi2011"
+
+\end_inset
+
+, due to their potential applications in fault-tolerant topological quantum
+ computation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nayak2008"
+
+\end_inset
+
+.
+ Roughly, Majorana fermions constitute 
+\begin_inset Quotes eld
+\end_inset
+
+half
+\begin_inset Quotes erd
+\end_inset
+
+ of an ordinary Dirac fermion, in the sense that two real Majorana fermions
+ 
+\begin_inset Formula $\gamma_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{2}$
+\end_inset
+
+ - which can be separated in arbitrary distance - mathematically define
+ a complex fermion operator 
+\begin_inset Formula $c=\gamma_{1}+i\gamma_{2}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wilczek2009"
+
+\end_inset
+
+.
+ The exchange statistics of Majorana fermions is exotic.
+ Unlike conventional bosons and fermions, braiding Majorana fermions around
+ one another in a 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+-dimensional Hilbert space (spanned by 
+\begin_inset Formula $2N$
+\end_inset
+
+ well-separated Majorana fermions) produce non-Abelian unitary transformations
+ in the Hilbert space.
+ Quantum information can then be non-locally encoded in the Hilbert space
+ by such braiding operators and be immune to decoherence, which is ideal
+ for the purpose of quantum computation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Nayak2008"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+At present, a number of experimental setting have been suggested for hosting
+ Majorana fermions under appropriate conditions, including chiral 
+\shape italic
+p
+\shape default
+-wave superconductors 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Read2000"
+
+\end_inset
+
+, fractional quantum Hall systems at filling 
+\begin_inset Formula $\nu=5/2$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Moore1991"
+
+\end_inset
+
+, and topological insulators or semiconductor nanowires in proximity to
+ an 
+\shape italic
+s
+\shape default
+-wave superconductor 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fu2008,Sau2010,Oreg2010"
+
+\end_inset
+
+.
+ The latest setting, which seems to be the most practical setup, is described
+ by the Sau-Lutchyn-Tewari-Das Sarma (SLTD) model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sau2010"
+
+\end_inset
+
+.
+ The key idea of this mechanism is that the Fermi surfaces are spin-split
+ by a Rashba spin-orbit coupling and an out-of-plane Zeeman field.
+ If the number of particles is tuned to make the inner Fermi surface disappearin
+g, the superconductivity will be only induced by pairing on the outer Fermi
+ surface, which is of 
+\shape italic
+p
+\shape default
+-wave in nature 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zhang2008,Sato2009"
+
+\end_inset
+
+, and therefore becomes topologically nontrivial.
+ Following this promising theoretical model, exciting experimental progress
+ for the observation of Majorana fermions has been made very recently 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mourik2012,Williams2012,Rokhinson2012"
+
+\end_inset
+
+, although unambiguous confirmation for their existence still remains elusive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig1.eps
+	width 40text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+(Color online).
+ 
+\series bold
+Formation of an effective 
+\shape italic
+p
+\shape default
+-wave energy band
+\series default
+.
+ The energy band of the system splits into two by spin-orbit coupling.
+ A large in-plane Zeeman field along the 
+\shape italic
+x
+\shape default
+-direction strongly tilts the energy dispersion.
+ When the Fermi energy lies below the upper band, atoms occupy the lower
+ band only and form an effective 
+\begin_inset Quotes eld
+\end_inset
+
+spinless
+\begin_inset Quotes erd
+\end_inset
+
+ system, in which the new composite particle consists of both spin-up and
+ spin-down ingredients (shown by circles with arrows) and interacts with
+ each other via an effective 
+\shape italic
+p
+\shape default
+-wave interaction.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The SLTD mechanism uses an out-of-plane Zeeman field to split the Fermi
+ surfaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sau2010"
+
+\end_inset
+
+.
+ It is interesting that such a splitting can also be achieved by applying
+ a large in-plane
+\emph on
+ 
+\emph default
+Zeeman field in combination with spin-orbit coupling, as illustrated in
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig1"
+
+\end_inset
+
+.
+ Furthermore, the in-plane field together with spin-orbit coupling is known
+ to introduce an asymmetry in the single-particle dispersion 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dong2013PRA,Shenoy2013"
+
+\end_inset
+
+, consequently to induce Cooper pairs with nonzero centre-of-mass momentum
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zheng2013,Wu2013,Liu2013,Dong2013NJP,Hu2013,Qu2013,Zhang2013"
+
+\end_inset
+
+ and hence realize the so-called spatially inhomogeneous Fulde-Ferrell (FF)
+ pairing scenario 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fulde1964"
+
+\end_inset
+
+.
+ It is therefore of interest to ask whether a topological phase transition
+ can also be driven by an in-plane Zeeman field only? If the answer is yes,
+ then we must be able to observe an exotic inhomogeneous topological FF
+ superfluid that supports Majorana fermions.
+ The understanding of such a new-type topological state of matter may greatly
+ enhance our knowledge of topological superfluidity.
+\end_layout
+
+\begin_layout Standard
+In this Letter, we examine the new mechanism by using an ultracold atomic
+ setting of a three-dimensional (3D) spin-orbit coupled atomic Fermi gas
+ subject to an in-plane Zeeman field.
+ By increasing the field strength above a threshold, we observe the change
+ of the topology of the Fermi surfaces that triggers a topological phase
+ transition.
+ The resulting inhomogeneous topological FF superfluid is gapless in the
+ bulk with nodal points form closed surfaces in momentum space.
+ While in real space, it hosts unidirected Majorana surface states that
+ propagate in the same direction on opposite boundaries.
+ These unique features are absent in standard topological superfluids known
+ so far such as the 
+\shape italic
+p
+\shape default
+-wave superconductors or the SLTD-type superconductors, both of which are
+ gapped in the bulk and support counter-propagating Majorana modes at surfaces.
+ We find that the phase space for the proposed novel gapless topological
+ FF superfluid is significant, implying that it could be easily realized
+ in current ultracold atomic experiments owing to the unprecedented tunability
+ of synthetic spin-orbit coupling, Zeeman field and interatomic interaction
+ in cold-atom laboratory 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lin2011,Wang2012,Cheuk2012"
+
+\end_inset
+
+.
+ We also discuss briefly the potential implementation of our proposal in
+ solid-state setups.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig2.eps
+	width 48text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+(Color online) 
+\series bold
+Zero temperature phase diagram of the FF superfluid at the interaction parameter
+ 
+\begin_inset Formula $1/(k_{F}a_{s})=-0.5$
+\end_inset
+
+
+\series default
+.
+ With increasing the in-plane Zeeman field, the Fermi cloud changes from
+ a gapped FF superfluid to a gapless FF superfluid, and finally turns into
+ a gapless topological superfluid.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig2"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\shape italic
+Results
+\series default
+\shape default
+.
+ --- For concreteness, we focus on a 3D spin-orbit coupled two-component
+ Fermi gas with an isotropic spin-orbit coupling 
+\begin_inset Formula $V_{SO}(\mathbf{\hat{k}})=\lambda(\hat{k}_{x}\sigma_{x}+\hat{k}_{y}\sigma_{y}+\hat{k}_{z}\sigma_{z})$
+\end_inset
+
+ subject to an in-plane Zeeman field 
+\begin_inset Formula $h\sigma_{x}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dong2013NJP,Anderson2012,Anderson2013"
+
+\end_inset
+
+, which can be described by the model Hamiltonian, 
+\begin_inset Formula 
+\begin{equation}
+\mathcal{H}=\int d{\bf r}\left[\sum_{\sigma\sigma'}\mathcal{\psi_{\sigma}^{\dagger}\left(\mathbf{r}\right)\textrm{\ensuremath{H}}}_{0}^{\sigma\sigma'}\psi_{\sigma'}\left(\mathbf{r}\right)+\mathcal{V}_{int}\right],
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\psi_{\sigma}^{\dagger}({\bf r})$
+\end_inset
+
+ (
+\begin_inset Formula $\psi_{\sigma}$
+\end_inset
+
+) is the field operator for creating (annihilating) an atom with pseudo-spin
+ state 
+\begin_inset Formula $\sigma\in(\uparrow,\downarrow)$
+\end_inset
+
+ at position 
+\begin_inset Formula ${\bf r}$
+\end_inset
+
+, 
+\begin_inset Formula $H_{0}=-\hbar^{2}\nabla^{2}/(2m)-\mu+V_{SO}(\mathbf{\hat{k}})+h\sigma_{x}$
+\end_inset
+
+ is the single-particle Hamiltonian with the atomic mass 
+\begin_inset Formula $m$
+\end_inset
+
+ and chemical potential 
+\begin_inset Formula $\mu$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{k}_{i=(x,y,z)}=-i\partial_{i}$
+\end_inset
+
+ is the momentum operator and 
+\begin_inset Formula $\sigma_{x,y,z}$
+\end_inset
+
+ are the Pauli matrices.
+ 
+\begin_inset Formula $\text{\mathcal{V}}_{int}=U_{0}\psi_{\uparrow}^{\dagger}({\bf r})\psi_{\downarrow}^{\dagger}({\bf r})\psi_{\downarrow}({\bf r})\psi_{\uparrow}({\bf r})$
+\end_inset
+
+ describes a pairwise attractive contact interaction of strength 
+\begin_inset Formula $U_{0}<0$
+\end_inset
+
+, where 
+\begin_inset Formula $U_{0}^{-1}=m/(4\pi\hbar^{2}a_{s})-V^{-1}\sum_{\mathbf{k}}m/(\hbar^{2}\mathbf{k}^{2})$
+\end_inset
+
+ can be expressed in terms of the 
+\shape italic
+s
+\shape default
+-wave scattering length 
+\begin_inset Formula $a_{s}$
+\end_inset
+
+.
+ At the mean-field level, the model Hamiltonian can be solved by taking
+ an order parameter 
+\begin_inset Formula $\Delta({\bf r})=-U_{0}\left\langle \psi_{\downarrow}(\mathbf{{\bf r}})\psi_{\uparrow}(\mathbf{{\bf r}})\right\rangle $
+\end_inset
+
+ and linearizing the interaction Hamiltonian 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula ${\cal V}_{int}\simeq-[\Delta(\mathbf{{\bf r}})\psi_{\uparrow}^{\dagger}(\mathbf{{\bf r}})\psi_{\downarrow}^{\dagger}(\mathbf{{\bf r}})+\textrm{H.c.}]-\left|\Delta({\bf r})\right|^{2}/U_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig3.eps
+	width 90text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+(Color online) 
+\series bold
+The evolution of the energy gap and of the topology of the Fermi surfaces
+ at 
+\begin_inset Formula $\lambda=E_{F}/k_{F}$
+\end_inset
+
+ with increasing the in-plane Zeeman field
+\series default
+.
+ (
+\series bold
+a
+\series default
+) The global energy gap 
+\begin_inset Formula $E_{g}=\min E_{2+}(\mathbf{k})$
+\end_inset
+
+ (red dashed line), the energy gap at 
+\begin_inset Formula $\mathbf{k}=0$
+\end_inset
+
+ (black solid line), and the minimum energy of the surface states at 
+\begin_inset Formula $k_{x}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{z}=0$
+\end_inset
+
+ (green solid circles) when open boundary is imposed along the 
+\shape italic
+y
+\shape default
+-direction.
+ (
+\series bold
+b
+\series default
+) The energy dispersion 
+\begin_inset Formula $E_{2\pm}(k_{y})$
+\end_inset
+
+ at 
+\begin_inset Formula $k_{x}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{z}=0$
+\end_inset
+
+.
+ (
+\series bold
+c
+\series default
+), (
+\series bold
+d
+\series default
+) and (
+\series bold
+e
+\series default
+) The 3D full plot of the energy dispersion 
+\begin_inset Formula $E_{2\pm}(k_{x},k_{\perp}=\sqrt{k_{y}^{2}+k_{z}^{2}})$
+\end_inset
+
+ at 
+\begin_inset Formula $h_{c1}\simeq0.3E_{F}$
+\end_inset
+
+ (c), 
+\begin_inset Formula $h_{c2}\simeq0.327E_{F}$
+\end_inset
+
+ (d) and 
+\begin_inset Formula $h=0.4E_{F}$
+\end_inset
+
+ (e).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the presence of an in-plane Zeeman field 
+\begin_inset Formula $h\sigma_{x}$
+\end_inset
+
+, it is now widely understood that Cooper pairs acquire a finite centre-of-mass
+ momentum 
+\begin_inset Formula $\mathbf{Q}=q\mathbf{e}_{x}$
+\end_inset
+
+ along the 
+\shape italic
+x
+\shape default
+-direction, i.e., 
+\begin_inset Formula $\Delta({\bf r})=\Delta e^{iqx}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dong2013PRA,Zheng2013,Wu2013,Liu2013,Dong2013NJP"
+
+\end_inset
+
+.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+By using the Nambu spinor 
+\begin_inset Formula $\Phi(\mathbf{{\bf r}})\equiv[\psi_{\uparrow}e^{+iqx/2},\psi_{\downarrow}e^{+iqx/2},\psi_{\uparrow}^{\dagger}e^{-iqx/2},\psi_{\downarrow}^{\dagger}e^{-iqx/2}]$
+\end_inset
+
+
+\begin_inset Formula $^{T}$
+\end_inset
+
+ to gauge out the momentum related phase in the order parameter, the mean-field
+ model Hamiltonian can be solved by diagonalizing the following Bogoliubov-de
+ Gennes (BdG) Hamiltonian
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{H}_{BdG}(\mathbf{\hat{k}})\equiv\left[\begin{array}{cc}
+H_{0}\left(\frac{\mathbf{Q}}{2}+\mathbf{\hat{k}}\right) & -i\Delta\sigma_{y}\\
+i\Delta\sigma_{y} & -H_{0}^{*}\left(\frac{\mathbf{Q}}{2}-\mathbf{\hat{k}}\right)
+\end{array}\right],\label{eq:BdGHami}
+\end{equation}
+
+\end_inset
+
+i.e., 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathcal{H}_{BdG}\Phi_{\mathbf{k\eta}}^{\nu}(\mathbf{{\bf r}})=E_{\mathbf{\eta\nu}}(\mathbf{k})\Phi_{\mathbf{k\eta}}^{\nu}(\mathbf{{\bf r}})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, which gives rise to the
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ wavefunction of Bogoliubov quasiparticles, 
+\begin_inset Formula $\Phi_{\mathbf{k\eta}}^{\text{\nu}}(\mathbf{{\bf r}})=1/\sqrt{V}e^{i\mathbf{k\cdot}\mathbf{{\bf r}}}[u_{\mathbf{\eta\uparrow}}^{\nu},u_{\mathbf{\eta\downarrow}}^{\nu},v_{\mathbf{\eta\uparrow}}^{\nu},v_{\eta\downarrow}^{\nu}]^{T}$
+\end_inset
+
+, and the energy 
+\begin_inset Formula $E_{\eta\nu}(\mathbf{k})$
+\end_inset
+
+.
+ We obtain four quasi-particle energy dispersions, indexed by 
+\begin_inset Formula $\nu\in(+,-)$
+\end_inset
+
+ for the particle (
+\begin_inset Formula $+$
+\end_inset
+
+) or hole (
+\begin_inset Formula $-$
+\end_inset
+
+) branch, and 
+\begin_inset Formula $\text{\eta\in(1,2)}$
+\end_inset
+
+ for the upper (
+\begin_inset Formula $1$
+\end_inset
+
+) or lower (
+\begin_inset Formula $2$
+\end_inset
+
+) helicity band split by spin-orbit coupling.
+ We derive the gap and number equations from the resulting mean-field thermodyna
+mic potential (see Methods) and solve them self-consistently to obtain 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu$
+\end_inset
+
+, from which we determine the phase diagram at zero temperature, as reported
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig2"
+
+\end_inset
+
+.
+ In our numerical calculations, using the number density 
+\begin_inset Formula $n$
+\end_inset
+
+ we have set the Fermi wavevector 
+\begin_inset Formula $k_{F}=(3\pi^{2}n)^{1/3}$
+\end_inset
+
+ and Fermi energy 
+\begin_inset Formula $E_{F}=\hbar^{2}k_{F}^{2}/(2m)$
+\end_inset
+
+ as the units for wavevector and energy, respectively.
+ Unless specifically noted, we shall focus on the weak coupling case with
+ a dimensionless interaction parameter 
+\begin_inset Formula $1/(k_{F}a_{s})=-0.5$
+\end_inset
+
+ and at zero temperature 
+\begin_inset Formula $T=0$
+\end_inset
+
+, for which our mean-field treatment could be well justified.
+\end_layout
+
+\begin_layout Standard
+It is readily seen from the phase diagram that an in-plane Zeeman field
+ will drive the Fermi system from a gapped FF superfluid to a gapless phase
+ (labelled as 
+\begin_inset Quotes eld
+\end_inset
+
+nodal FF
+\begin_inset Quotes erd
+\end_inset
+
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dong2013NJP"
+
+\end_inset
+
+.
+ Remarkably, at sufficiently large value it will also lead to a gapless
+ topologically non-trivial state (
+\begin_inset Quotes eld
+\end_inset
+
+topological nodal FF
+\begin_inset Quotes erd
+\end_inset
+
+).
+ The evolution of the energy spectrum at a typical spin-orbit coupling strength
+ 
+\begin_inset Formula $\lambda=E_{F}/k_{F}$
+\end_inset
+
+ as a result of the increasing in-plane Zeeman field is presented in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig3"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Physically, the transition to a gapless phase can be well characterized
+ by a global energy gap 
+\begin_inset Formula $E_{g}=\min E_{2+}(\mathbf{k})$
+\end_inset
+
+, which is the half of the energy difference between the minimum energy
+ of the particle branch and the maximum of the hole branch due to the particle-h
+ole symmetry 
+\begin_inset Formula $E_{2+}(\mathbf{k})=-E_{2-}(-\mathbf{k})$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $E_{g}\leq0$
+\end_inset
+
+ and 
+\begin_inset Formula $E_{g}>0$
+\end_inset
+
+ characterize a gapless and gapped state, respectively.
+ The topological phase transition, on the contrary, is related to the change
+ of the topology of the Fermi surfaces.
+ It is well known that such a change must be accompanied with the close
+ and re-open of an energy gap at some specific points in momentum space
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hasan2010,Qi2011"
+
+\end_inset
+
+.
+ In our continuum case of a homogeneous Fermi gas, this occurs precisely
+ at the origin 
+\begin_inset Formula $\mathbf{k}=\mathbf{0}$
+\end_inset
+
+ (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig3"
+
+\end_inset
+
+b).
+ Therefore, naïvely the topological transition can be determined from the
+ condition 
+\begin_inset Formula $E_{2+}(\mathbf{k}=\mathbf{0})=0$
+\end_inset
+
+ or more explicitly,
+\begin_inset Formula 
+\begin{equation}
+h_{c2}=\sqrt{\left(\mu-\frac{\hbar^{2}q^{2}}{8m}\right)^{2}+\Delta^{2}}-\frac{\lambda q}{2}.
+\end{equation}
+
+\end_inset
+
+In the absence of a FF pairing momentum (
+\begin_inset Formula $q=0$
+\end_inset
+
+), the above condition reduces to the well-known criterion 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $h_{c}=\sqrt{\mu^{2}+\Delta^{2}}$
+\end_inset
+
+ for the appearance of a SLTD topological superfluid when an out-of-plane
+ Zeeman field is applied 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sau2010,Oreg2010"
+
+\end_inset
+
+.
+ It is interesting that the gapless transition always occurs before the
+ topological transition, as a result of 
+\begin_inset Formula $E_{g}\leq E_{2+}(\mathbf{k}=\mathbf{0})$
+\end_inset
+
+.
+ Thus, bulk-gapped
+\emph on
+ 
+\emph default
+topological FF superfluids, if exist, must appear at very high in-plane
+ Zeeman field.
+ As a superfluid analogue of strong 3D topological insulators 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hasan2010,Qi2011"
+
+\end_inset
+
+, they are anticipated to have the unique feature of a single Dirac cone
+ for the energy dispersion of the Majorana edge states.
+ Unfortunately, in the parameter space that we considered, we do not find
+ their existence.
+\end_layout
+
+\begin_layout Standard
+At the coupling strength 
+\begin_inset Formula $\lambda=E_{F}/k_{F}$
+\end_inset
+
+, the gapless transition and topological transition occur at 
+\begin_inset Formula $h_{c1}\simeq0.3E_{F}$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{c2}\simeq0.327E_{F}$
+\end_inset
+
+, respectively, as can be seen from Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig3"
+
+\end_inset
+
+a, where 
+\begin_inset Formula $E_{g}$
+\end_inset
+
+ (red dashed line) and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E_{2+}(\mathbf{k}=\mathbf{0})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (black solid line) become zero as the in-plane Zeeman field increases.
+ When 
+\begin_inset Formula $h>h_{c1}$
+\end_inset
+
+, nodal points which satisfy 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E_{2\pm}(\mathbf{k})=0$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ develop and form two closed surfaces in momentum space 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dong2013NJP"
+
+\end_inset
+
+.
+ When the in-plane field further increases, passing through the threshold
+ 
+\begin_inset Formula $h_{c2}$
+\end_inset
+
+ for the topological transition (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig3"
+
+\end_inset
+
+d), the energy dispersion of the particle- and hole-branches touches at
+ two specific points (
+\begin_inset Formula $\pm k_{W}$
+\end_inset
+
+,0,0), as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig3"
+
+\end_inset
+
+e.
+ Around these points, the dispersion of Bogoliubov quasiparticles in the
+ bulk acquires a linear structure and thereby form a Dirac cone.
+ This is precisely the energy dispersion for massless Weyl fermions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wan2011,Burkov2011,Xu2011"
+
+\end_inset
+
+.
+ In this sense, the gapless topological FF superfluid predicted in this
+ work provides a new avenue for the observation of Weyl fermions around
+ the Weyl nodes (
+\begin_inset Formula $\pm k_{W}$
+\end_inset
+
+,0,0).
+ Indeed, Weyl fermions have recently been discussed in the context of 3D
+ gapped topological superfluids 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sau2012,Xu2014"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In our case, the appearance of the Weyl nodes and of the topological order
+ is closely related.
+ Due to the asymmetry in the 
+\begin_inset Formula $k_{x}$
+\end_inset
+
+ axis, only one of the Weyl nodes is occupied.
+ Thus, we may characterize the topological order of the gapless FF superfluid
+ by using the topological invariant of Weyl fermions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Qi2011,Schnyder2008"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+N_{W}=\int\frac{d^{3}\mathbf{k}}{24\pi^{2}}\epsilon^{\mu\nu\rho}\textrm{Tr}\left[Q_{\mathbf{k}}^{\dagger}\partial_{\mu}Q_{\mathbf{k}}Q_{\mathbf{k}}^{\dagger}\partial_{\nu}Q_{\mathbf{k}}Q_{\mathbf{k}}^{\dagger}\partial_{\rho}Q_{\mathbf{k}}\right],
+\end{equation}
+
+\end_inset
+
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $Q_{\mathbf{k}}$
+\end_inset
+
+ is the unitary matrix determined by the BdG Hamiltonian, 
+\begin_inset Formula $\mu,\nu,\rho=(k_{x},k_{y},k_{z})$
+\end_inset
+
+ and the domain of the integration includes the isolated, occupied Weyl
+ node.
+ The gapless topological FF superfluid is uniquely characterized a nonzero
+ topological invariant 
+\begin_inset Formula $N_{W}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To further demonstrate the topological nature of the gapless FF superfluid,
+ we calculate the energy dispersion in the presence of open boundary by
+ imposing hard wall confinement along the 
+\shape italic
+y
+\shape default
+-direction (see Methods).
+ There is a zero-energy Majorana fermion state on each of the two edges
+ of the system at 
+\begin_inset Formula $y=0$
+\end_inset
+
+ or 
+\begin_inset Formula $y=L$
+\end_inset
+
+, which is the direct signature of a topologically non-trivial state.
+ The existence of Majorana fermions is reported in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig3"
+
+\end_inset
+
+a by green solid circles.
+ They immediately appear after the change in the topology of the Fermi surfaces.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig4.eps
+	width 48text%
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+(Color online) 
+\series bold
+Majorana surface states arising from the hard wall confinement along the
+ 
+\shape italic
+y
+\shape default
+-direction
+\series default
+.
+ (
+\series bold
+a
+\series default
+) The surface state dispersion forms two sheets which crosses at the line
+ 
+\begin_inset Formula $k_{z}=0$
+\end_inset
+
+.
+ (
+\series bold
+b
+\series default
+) and (
+\series bold
+c
+\series default
+) The full energy spectrum 
+\begin_inset Formula $E_{2\pm}(k_{x},k_{z})$
+\end_inset
+
+ along the 
+\begin_inset Formula $k_{z}$
+\end_inset
+
+ or 
+\begin_inset Formula $k_{x}$
+\end_inset
+
+ axis, respectively.
+ The surface states at the two boundaries are highlighted by red solid circles
+ and blue empty squares, respectively.
+ (
+\series bold
+d
+\series default
+) The wavefunction of the zero-energy Majorana fermions at 
+\begin_inset Formula $k_{x}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{z}=0$
+\end_inset
+
+, satisfying the symmetry 
+\begin_inset Formula $u_{\sigma}(y)=e^{i\vartheta}v_{\sigma}^{*}(y)$
+\end_inset
+
+, where 
+\begin_inset Formula $\vartheta$
+\end_inset
+
+ is a constant phase factor and 
+\begin_inset Formula $\sigma=\uparrow,\downarrow$
+\end_inset
+
+.
+ In numerical calculations, we have set the length of the confinement 
+\begin_inset Formula $L=200k_{F}^{-1}$
+\end_inset
+
+.
+ Other parameters are 
+\begin_inset Formula $\lambda=E_{F}/k_{F}$
+\end_inset
+
+ and 
+\begin_inset Formula $h=0.4E_{F}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig4"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now discuss in more detail the Majorana surface states, whose dispersion
+ is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4"
+
+\end_inset
+
+.
+ In momentum space, 
+\begin_inset Formula $k_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{z}$
+\end_inset
+
+ are still good quantum numbers, so we actually plot 
+\begin_inset Formula $\min E_{2+}(k_{x},k_{z})$
+\end_inset
+
+ and 
+\begin_inset Formula $\max E_{2-}(k_{x},k_{z})$
+\end_inset
+
+.
+ There are two sheets in the energy dispersion (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4"
+
+\end_inset
+
+a), corresponding to the surface states localized at the boundary 
+\begin_inset Formula $y=0$
+\end_inset
+
+ and 
+\begin_inset Formula $y=L$
+\end_inset
+
+, respectively.
+ Remarkably, these two sheets cross at the line 
+\begin_inset Formula $k_{z}=0$
+\end_inset
+
+, indicating that along this line the two branches of surface states are
+ unidirected, that is, propagating in the same direction on opposite boundaries.
+ This is highlighted in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4"
+
+\end_inset
+
+b, from which we also identify that the unidirected Majorana surface states
+ smoothly connect the two Weyl nodes (
+\begin_inset Formula $\pm k_{W}$
+\end_inset
+
+,0,0) in the bulk, where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $k_{W}\simeq0.4k_{F}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ As there are no net atomic currents at equilibrium, the co-propagating
+ surface states on opposite boundaries must be compensated by some extra
+ counter-propagating modes in the bulk.
+ This can only happen in systems with a gapless bulk, consistent with the
+ gapless nature of our topological FF superfluid.
+ The unidirected Majorana surface states only occur along the line 
+\begin_inset Formula $k_{z}=0$
+\end_inset
+
+.
+ Actually, if we make a cut on the two sheets along other directions, for
+ example, along the line 
+\begin_inset Formula $k_{x}=0$
+\end_inset
+
+, it is easy to see that the Majorana surface states become counter-propagating
+ (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4"
+
+\end_inset
+
+c for the dispersion as a function of 
+\begin_inset Formula $k_{z}$
+\end_inset
+
+), resembling the surface states in the standard gapped topological superfluid.
+ This follows the fact that at 
+\begin_inset Formula $k_{x}=0$
+\end_inset
+
+ our topological FF superfluid is actually gapped in the bulk.
+ The unidirected surface states discussed in our work is therefore a unique
+ feature of novel gapless topological FF superfluid.
+\end_layout
+
+\begin_layout Standard
+It is worth noting that the 3D gapless topological FF superfluid can not
+ be viewed as a stack of 2D topological superfluids along a specific direction
+ (i.e., 
+\shape italic
+z
+\shape default
+-axis), unlike the standard 3D topological superfluids known so far.
+ For the latter, the Majorana surface states of the 3D system can be understood
+ as the edge states of the 2D system on the surfaces which are parallel
+ to the 
+\shape italic
+z
+\shape default
+-axis and therefore have a flat dispersion that does not depend on 
+\begin_inset Formula $k_{z}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sau2012"
+
+\end_inset
+
+.
+ This is analogous to the trivial or weak 3D topological insulators 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hasan2010,Qi2011"
+
+\end_inset
+
+.
+ In our case, due to the existence of spin-orbit coupling in all three spatial
+ directions, the dispersion of the Majorana surface states is no longer
+ flat.
+ In this respect, the gapless topological FF superfluid is better regarded
+ as the superfluid analogue of a strong topological insulator 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hasan2010,Qi2011"
+
+\end_inset
+
+, although the surface states may not have a Dirac-cone-like dispersion
+ due to the gapless bulk.
+ In consistent with this classification, there is only one pair of zero-energy
+ Majorana fermions localized on each surface, respectively.
+ In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4"
+
+\end_inset
+
+d, we examine the wave function of Majorana fermions.
+ It satisfies the desired symmetry 
+\begin_inset Formula $u_{\sigma}(y)=e^{i\vartheta}v_{\sigma}^{*}(y)$
+\end_inset
+
+ for each spin component 
+\begin_inset Formula $\sigma=\uparrow,\downarrow$
+\end_inset
+
+ , up to an unimportant constant phase 
+\begin_inset Formula $\vartheta$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2012"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\shape italic
+Discussions
+\series default
+\shape default
+.
+ --- Owing to their significant parameter space in the phase diagram, our
+ proposed gapless topological FF superfluids could be easily detected in
+ current cold-atom experiments, where the isotropic or Rashba-type spin-orbit
+ coupling can be engineered by using Raman lasers 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Anderson2012"
+
+\end_inset
+
+ or a sequence of pulsed inhomogeneous magnetic fields 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Anderson2013"
+
+\end_inset
+
+.
+ The unidirected Majorana surface modes, as a unique experimental evidence
+ of the novel topological superfluid, could in principle be directly visible
+ as arcs in momentum space at the Fermi surfaces in the momentum-resolved
+ radio-frequency spectroscopy 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2012"
+
+\end_inset
+
+.
+ In solid-state systems, a promising candidate for realizing the gapless
+ topological FF superfluid is to use a quantum well with large Rashba and
+ Dresselhaus spin-orbit couplings (i.e., hole-doped InSb) in proximity to
+ a conventional 
+\shape italic
+s
+\shape default
+-wave superconductor, where the in-plane Zeeman field in the quantum well
+ layer can be controlled to minimize the orbital effect 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Alicea2010"
+
+\end_inset
+
+.
+ Other candidates include noncentrosymmetric superconductors such as CePt
+\begin_inset Formula $_{3}$
+\end_inset
+
+Si and Li
+\begin_inset Formula $_{2}$
+\end_inset
+
+Pd
+\begin_inset Formula $_{x}$
+\end_inset
+
+Pt
+\begin_inset Formula $_{3-x}$
+\end_inset
+
+B 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schnyder2011"
+
+\end_inset
+
+, in the presence of a magnetic field on the plane of Rashba spin-orbit
+ coupling.
+\end_layout
+
+\begin_layout Standard
+In summary, we have proposed a new mechanism to create topologically non-trivial
+ states by using an in-plane Zeeman field only.
+ Novel gapless topological superfluids with inhomogeneous Fulde-Ferrell
+ pairing order parameter can be realized using three-dimensional spin-orbit
+ coupled 
+\shape italic
+s
+\shape default
+-wave superfluids, where the finite momentum pairing and topological order
+ are both driven by the in-plane Zeeman field.
+ They feature unidirected Majorana surface modes and a pair of zero-energy
+ Majorana fermions at the edges, which are quite different from the standard
+ gapped topological superfluids that are known to date.
+ These new features will greatly enrich our understanding of topological
+ quantum matters, in both solid-state and cold-atom systems.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\shape italic
+Methods
+\series default
+\shape default
+.
+ --- The details of our theoretical framework have been presented in the
+ previous work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dong2013NJP"
+
+\end_inset
+
+.
+ Here we give a brief summary.
+ Taking the mean-field approximation for the pairing interaction term, the
+ model Hamiltonian of the Fermi system can be rewritten into a compact form,
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathcal{H}=(1/2)\int d{\bf {\bf r}}\Phi^{\dagger}(\mathbf{{\bf r}})\mathcal{H}_{BdG}(\mathbf{\hat{k}})\Phi(\mathbf{{\bf r}})-V\Delta^{2}/U_{0}+\sum_{\mathbf{k}}(\xi_{\mathbf{k}+\mathbf{Q}/2}+\xi_{\mathbf{k}-\mathbf{Q}/2})/2$
+\end_inset
+
+, where the explicit form of 
+\begin_inset Formula $\mathcal{H}_{BdG}(\mathbf{\hat{k}})$
+\end_inset
+
+ in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:BdGHami"
+
+\end_inset
+
+) is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cccc}
+\hat{\xi}_{{\bf k}+}+\lambda\hat{k}_{z} & \Lambda_{{\bf k}+}^{\dagger} & 0 & -\Delta\\
+\Lambda_{{\bf k+}} & \hat{\xi}_{{\bf k}+}-\lambda\hat{k}_{z} & \Delta & 0\\
+0 & \Delta & -\hat{\xi}_{{\bf k}-}+\lambda\hat{k}_{z} & \Lambda_{{\bf k-}}\\
+-\Delta & 0 & \Lambda_{{\bf k-}}^{\dagger} & -\hat{\xi}_{{\bf k}-}-\lambda\hat{k}_{z}
+\end{array}\right]\label{eq:BdGHami2}
+\end{equation}
+
+\end_inset
+
+with 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\hat{\xi}_{{\bf k}\pm}\equiv\hbar^{2}(\hat{\mathbf{k}}\pm\mathbf{Q}/2)^{2}/(2m)-\mu$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Lambda_{{\bf k\pm}}\equiv\lambda(\hat{k}_{x}\pm q/2+i\hat{k}_{y})\pm h$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ For a homogeneous Fermi gas with open boundary condition, the BdG Hamiltonian
+ can be diagonalized by replacing the momentum operators 
+\begin_inset Formula $\hat{k}_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $i=x,y,z$
+\end_inset
+
+) by the corresponding 
+\shape italic
+c
+\shape default
+-numbers 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+.
+ Thus, we obtain the energy spectrum of Bogoliubov quasiparticles
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $E_{\eta\nu}(\mathbf{k})$
+\end_inset
+
+, where 
+\begin_inset Formula $\nu\in(+,-)$
+\end_inset
+
+ denotes the particle or hole branch and 
+\begin_inset Formula $\text{\eta\in(1,2)}$
+\end_inset
+
+ stands for the upper or lower helicity band.
+ The mean-field thermodynamic potential 
+\begin_inset Formula $\Omega_{\textrm{mf}}$
+\end_inset
+
+ at the temperature 
+\begin_inset Formula $T$
+\end_inset
+
+ can be written down straightforwardly,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\Omega_{\textrm{mf}}}{V} & = & \frac{1}{2V}\sum_{\mathbf{k}}\left[\xi_{\mathbf{k}+\mathbf{Q}/2}+\xi_{\mathbf{k}-\mathbf{Q}/2}-\sum_{\eta=1,2}E_{\eta+}(\mathbf{k})\right]\nonumber \\
+ &  & -\frac{\Delta^{2}}{U_{0}}-\frac{k_{B}T}{V}\sum_{\mathbf{k}\eta=1,2}\ln\left[1+e^{-E_{\eta+}(\mathbf{k})/k_{B}T}\right],
+\end{eqnarray}
+
+\end_inset
+
+where the last term is the standard expression of thermodynamic potential
+ for non-interacting Bogoliubov quasiparticles.
+ Due to the inherent particle-hole symmetry in the Nambu spinor representation,
+ the summation over the quasiparticle energy has been restricted to the
+ particle branch, to avoid double counting.
+ F
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+or a given set of parameters (i.e., the temperature 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\family default
+\series default
+\shape italic
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+s
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-wave scattering length 
+\begin_inset Formula $a_{s}$
+\end_inset
+
+ etc.), different mean-field phases can be determined using the self-consistent
+ stationary conditions: 
+\begin_inset Formula $\partial\Omega_{\textrm{mf}}/\partial\Delta=0$
+\end_inset
+
+, 
+\begin_inset Formula $\partial\Omega_{\textrm{mf}}/\partial q=0$
+\end_inset
+
+, as well as the conservation of total atom number, 
+\begin_inset Formula $n=-(1/V)\partial\Omega/\partial\mu$
+\end_inset
+
+, where 
+\begin_inset Formula $n$
+\end_inset
+
+ is the number density.
+ At a given temperature, the ground state has the lowest free energy 
+\begin_inset Formula $F=\Omega+\mu N$
+\end_inset
+
+.
+ For simplicity, we only report the results at zero temperature.
+\end_layout
+
+\begin_layout Standard
+To determine the Majorana surface states in the topologically non-trivial
+ phase, we impose a hard wall potential, for example, along the 
+\shape italic
+y
+\shape default
+-direction, so that any single-particle wavefunction must vanish identically
+ at the boundary 
+\begin_inset Formula $y=0$
+\end_inset
+
+ or 
+\begin_inset Formula $y=L$
+\end_inset
+
+.
+ We assume that the length is sufficiently large so we use the solution
+ of a uniform pairing gap.
+ Accordingly, in the BdG Hamiltonian Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:BdGHami2"
+
+\end_inset
+
+), we replace the momentum operator 
+\begin_inset Formula $k_{y}$
+\end_inset
+
+ by 
+\begin_inset Formula $-i\partial_{y}$
+\end_inset
+
+.
+ It can be diagonalized by using the following ansatz for the Bogoliubov
+ wavefunctions,
+\begin_inset Formula 
+\begin{eqnarray}
+u_{\sigma}\left(y\right) & = & \sum_{j=0}^{N_{\textrm{max}}-1}U_{\sigma j}\psi_{j}\left(y\right),\\
+v_{\sigma}\left(y\right) & = & \sum_{j=0}^{N_{\mathbf{\textrm{max}}}-1}V_{\sigma j}\psi_{j}\left(y\right),
+\end{eqnarray}
+
+\end_inset
+
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\psi_{j}\left(y\right)=\sqrt{2/L}\sin[(j+1)\pi y/L]$
+\end_inset
+
+ is the eigenfunction of the hard wall potential with eigenvalue 
+\begin_inset Formula $\epsilon_{j}=\hbar^{2}(j+1)^{2}\pi^{2}/(2mL^{2}).$
+\end_inset
+
+ Inserting this ansatz into the BdG equation, we convert the BdG Hamiltonian
+ into a 
+\begin_inset Formula $4N_{\textrm{max}}$
+\end_inset
+
+ by 
+\begin_inset Formula $4N_{\textrm{max}}$
+\end_inset
+
+ symmetric (complex) matrix, whose diagonalization directly gives rise to
+ the energies and wavefunctions of the Majorana surface states.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Hasan2010"
+
+\end_inset
+
+M.
+ Z.
+ Hasan and C.
+ L.
+ Kane, Rev.
+ Mod.
+ Phys.
+ 
+\series bold
+82
+\series default
+, 3045 (2010).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Qi2011"
+
+\end_inset
+
+X.-L.
+ Qi and S.-C.
+ Zhang, Rev.
+ Mod.
+ Phys.
+ 
+\series bold
+83
+\series default
+, 1057 (2011).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Nayak2008"
+
+\end_inset
+
+C.
+ Nayak, S.
+ H.
+ Simon, A.
+ Stern, M.
+ Freedman, and S.
+ Das Sarma, Rev.
+ Mod.
+ Phys.
+ 
+\series bold
+80
+\series default
+, 1083 (2008).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Wilczek2009"
+
+\end_inset
+
+F.
+ Wilczek, Nature Phys.
+ 
+\series bold
+5
+\series default
+, 614 (2009).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Read2000"
+
+\end_inset
+
+N.
+ Read and D.
+ Green, Phys.
+ Rev.
+ B 
+\series bold
+61
+\series default
+, 10267 (2000).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Moore1991"
+
+\end_inset
+
+G.
+ Moore and N.
+ Read, Nucl.
+ Phys.
+ B 
+\series bold
+360
+\series default
+, 362 (1991).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Fu2008"
+
+\end_inset
+
+L.
+ Fu and C.
+ L.
+ Kane, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+100
+\series default
+, 096407 (2008).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Sau2010"
+
+\end_inset
+
+J.
+ D.
+ Sau, R.
+ M.
+ Lutchyn, S.
+ Tewari, and S.
+ Das Sarma, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+104
+\series default
+, 040502 (2010).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Oreg2010"
+
+\end_inset
+
+Y.
+ Oreg, G.
+ Refael, and F.
+ von Oppen, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+105
+\series default
+, 177002 (2010).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Zhang2008"
+
+\end_inset
+
+C.
+ Zhang, S.
+ Tewari, R.
+ M.
+ Lutchyn, and S.
+ Das Sarma, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+101
+\series default
+, 160401 (2008).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Sato2009"
+
+\end_inset
+
+M.
+ Sato, Y.
+ Takahashi, and S.
+ Fujimoto, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+103
+\series default
+, 020401 (2009).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Mourik2012"
+
+\end_inset
+
+V.
+ Mourik, K.
+ Zuo, S.
+ M.
+ Frolov, S.
+ R.
+ Plissard, E.
+ P.
+ A.
+ M.
+ Bakkers, and L.
+ P.
+ Kouwenhoven, Science 
+\series bold
+336
+\series default
+, 1003 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Williams2012"
+
+\end_inset
+
+J.
+ R.
+ Williams, A.
+ J.
+ Bestwick, P.
+ Gallagher, S.
+ S.
+ Hong, Y.
+ Cui, Andrew S.
+ Bleich, J.
+ G.
+ Analytis, I.
+ R.
+ Fisher, and D.
+ Goldhaber-Gordon, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+109
+\series default
+, 056803 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Rokhinson2012"
+
+\end_inset
+
+L.
+ P.
+ Rokhinson, X.
+ Liu and J.
+ K.
+ Furdyna, Nature Phys.
+ 
+\series bold
+8
+\series default
+, 795 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Dong2013PRA"
+
+\end_inset
+
+L.
+ Dong, L.
+ Jiang, H.
+ Hu, and H.
+ Pu, Phys.
+ Rev.
+ A 
+\series bold
+87
+\series default
+, 043616 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Shenoy2013"
+
+\end_inset
+
+V.
+ B.
+ Shenoy, Phys.
+ Rev.
+ A 
+\series bold
+88
+\series default
+, 033609 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Zheng2013"
+
+\end_inset
+
+Z.
+ Zheng, M.
+ Gong, X.
+ Zou, C.
+ Zhang, and G.-C.
+ Guo, Phys.
+ Rev.
+ A 
+\series bold
+87
+\series default
+, 031602(R) (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Wu2013"
+
+\end_inset
+
+F.
+ Wu, G.-C.
+ Guo, W.
+ Zhang, and W.
+ Yi, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+110
+\series default
+, 110401 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Liu2013"
+
+\end_inset
+
+X.-J.
+ Liu and H.
+ Hu, Phys.
+ Rev.
+ A 
+\series bold
+87
+\series default
+, 051608(R) (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Dong2013NJP"
+
+\end_inset
+
+L.
+ Dong, L.
+ Jiang, and H.
+ Pu, New J.
+ Phys.
+ 
+\series bold
+15
+\series default
+, 075014 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Hu2013"
+
+\end_inset
+
+H.
+ Hu and X.-J.
+ Liu, New J.
+ Phys.
+ 
+\series bold
+15
+\series default
+, 093037 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Qu2013"
+
+\end_inset
+
+C.
+ Qu, Z.
+ Zheng, M.
+ Gong, Y.
+ Xu, L.
+ Mao, X.
+ Zou, G.
+ Guo, and C.
+ Zhang, Nat.
+ Comm.
+ 
+\series bold
+4
+\series default
+, 2710 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Zhang2013"
+
+\end_inset
+
+W.
+ Zhang and W.
+ Yi, Nat.
+ Comm.
+ 
+\series bold
+4
+\series default
+, 2711 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Fulde1964"
+
+\end_inset
+
+P.
+ Fulde and R.
+ A.
+ Ferrell, Phys.
+ Rev.
+ 
+\series bold
+135
+\series default
+, A550 (1964).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Lin2011"
+
+\end_inset
+
+Y.-J.
+ Lin, K.
+ Jiménez-García, and I.
+ B.
+ Spielman, Nature (London) 
+\series bold
+471
+\series default
+, 83 (2011).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Wang2012"
+
+\end_inset
+
+ P.
+ Wang, Z.-Q.
+ Yu, Z.
+ Fu, J.
+ Miao, L.
+ Huang, S.
+ Chai, H.
+ Zhai, and J.
+ Zhang, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+109
+\series default
+, 095301 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Cheuk2012"
+
+\end_inset
+
+ L.
+ W.
+ Cheuk, A.
+ T.
+ Sommer, Z.
+ Hadzibabic, T.
+ Yefsah, W.
+ S.
+ Bakr, and M.
+ W.
+ Zwierlein, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+109
+\series default
+, 095302 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Anderson2012"
+
+\end_inset
+
+B.
+ M.
+ Anderson, G.
+ Juzeliūnas, V.
+ M.
+ Galitski, and I.
+ B.
+ Spielman, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+108
+\series default
+, 235301 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Anderson2013"
+
+\end_inset
+
+B.
+ M.
+ Anderson, I.
+ B.
+ Spielman, and G.
+ Juzeliūnas, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+111
+\series default
+, 125301 (2013).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Wan2011"
+
+\end_inset
+
+X.
+ Wan, A.
+ M.
+ Turner, A.
+ Vishwanath, and S.
+ Y.
+ Savrasov, Phys.
+ Rev.
+ B 
+\series bold
+83
+\series default
+, 205101 (2011).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Burkov2011"
+
+\end_inset
+
+A.
+ A.
+ Burkov and L.
+ Balents, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+107
+\series default
+, 127205 (2011).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Xu2011"
+
+\end_inset
+
+G.
+ Xu, H.
+ Weng, Z.
+ Wang, X.
+ Dai, and Z.
+ Fang, Phys.
+ Rev.
+ Lett.
+ 
+\series bold
+107
+\series default
+, 186806 (2011).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Sau2012"
+
+\end_inset
+
+J.
+ D.
+ Sau and S.
+ Tewari, Phys.
+ Rev.
+ B 
+\series bold
+86
+\series default
+, 104509 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Xu2014"
+
+\end_inset
+
+Y.
+ Xu, R.
+ Chu, and C.
+ Zhang, arXiv:1310.4100.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Schnyder2008"
+
+\end_inset
+
+A.
+ P.
+ Schnyder, S.
+ Ryu, A.
+ Furusaki, and A.
+ W.
+ W.
+ Ludwig, Phys.
+ Rev.
+ B 
+\series bold
+78
+\series default
+, 195125 (2008).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Liu2012"
+
+\end_inset
+
+X.-J.
+ Liu, L.
+ Jiang, H.
+ Pu, and H.
+ Hu, Phys.
+ Rev.
+ A 
+\series bold
+85
+\series default
+, 021603(R) (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Alicea2010"
+
+\end_inset
+
+J.
+ Alicea, Phys.
+ Rev.
+ B 
+\series bold
+81
+\series default
+, 125318 (2010).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Schnyder2011"
+
+\end_inset
+
+A.
+ P.
+ Schnyder and S.
+ Ryu, Phys.
+ Rev.
+ B 
+\series bold
+84
+\series default
+, 060504(R) (2011).
+\end_layout
+
+\begin_layout Paragraph*
+
+\series bold
+Acknowledgement
+\end_layout
+
+\begin_layout Standard
+HH and XJL were supported by the ARC Discovery Projects (Grant Nos.
+ FT130100815, DP140103231 and DP140100637) and NFRP-China (Grant No.
+ 2011CB921502).
+ HP was supported by the NSF, the Welch Foundation (Grant No.
+ C-1669) and the DARPA OLE program.
+\end_layout
+
+\begin_layout Paragraph*
+
+\series bold
+Author contributions
+\end_layout
+
+\begin_layout Standard
+HH, HP and XJL concieved the concept of topolgoical superfluidity induced
+ by an in-plane Zeeman field.
+ HH, LD and XJL performed numerical calculations.
+ YC checked the topological superfluidity in the case of two-dimensional
+ atomic Fermi gases.
+ All authors contributed to the writting of the manuscript.
+\end_layout
+
+\begin_layout Paragraph*
+
+\series bold
+Competing financial interests
+\end_layout
+
+\begin_layout Standard
+The authors declare no competing finanical interests.
+\end_layout
+
+\end_body
+\end_document
