@@ -1,4 +1,4 @@
-#LyX 1.6.6.1 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.10 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -59,11 +59,11 @@
 \begin_body
 
 \begin_layout Title
-Thermodynamic properties of cavity-assisted many-body atomic systems
+Thermodynamic properties of cavity-assisted N-atomic systems
 \end_layout
 
 \begin_layout Author
-Lin Dong, 
+Lin, 
 \begin_inset ERT
 status open
 
@@ -90,65 +90,13 @@ We consider an ensemble of
 
  two-level atoms coupled by two photon Raman transition, and atoms are placed
  in a cavity.
- Atoms and photons are expected to interact in a highly nonlinear fashion,
- though atom themselves are considered non-interacting.
  We don't consider cavity pump and decay in this work.
 \end_layout
 
 \begin_layout Standard
-Using bare atomic psedo-spin operater 
-\begin_inset Formula $\Psi_{\sigma}({\bf r})$
-\end_inset
-
- and photon field operater 
-\begin_inset Formula $\tilde{c}$
-\end_inset
-
- (without explicit time dependence), we can write the atom-cavity Hamiltonian
- as, 
-\begin_inset Formula \begin{eqnarray*}
-H & = & \sum_{j=1}^{N}\sum_{\sigma}\int d{\bf r}\left[\Psi_{j\sigma}^{\dagger}({\bf r})\left(\frac{\hbar^{2}\hat{{\bf k}}^{2}}{2m}+\epsilon_{\sigma}^{0}\right)\Psi_{j\sigma}({\bf r})\right]+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\sum_{j=1}^{N}\int d{\bf r}\left(e^{2i\hbar k_{r}z}\Psi_{j\uparrow}^{\dagger}({\bf r})\Psi_{j\downarrow}({\bf r})ce^{i\omega_{R}t}+\text{c.c}\right)+\hbar\omega_{c}\tilde{c}^{\dagger}\tilde{c}\end{eqnarray*}
-
-\end_inset
-
-We work in rotating frame 
-\begin_inset Formula $c=\tilde{c}e^{i\omega_{R}t}$
-\end_inset
-
- (which amounts to performing an unitary transformation 
-\begin_inset Formula $U=e^{i\omega_{R}\tilde{c}^{\dagger}\tilde{c}t}$
-\end_inset
-
- to the Hamiltonian by 
-\begin_inset Formula $H'=UHU^{-1}+i\frac{dU}{dt}U^{-1}$
-\end_inset
-
-) and gauge transformation 
-\begin_inset Formula $\tilde{\psi}_{j\uparrow}=\Psi_{j\uparrow}e^{-i\hbar k_{r}z}$
-\end_inset
-
-, 
-\begin_inset Formula $\tilde{\psi}_{j\downarrow}=\Psi_{j\downarrow}e^{+i\hbar k_{r}z}$
-\end_inset
-
- .
- It is helpful to make use of Baker-Hausdorff lemma to compute 
-\begin_inset Formula $UHU^{-1}$
-\end_inset
-
- term.
- For instance, 
-\begin_inset Formula $e^{i\omega_{R}\tilde{c}^{\dagger}\tilde{c}t}ce^{i\omega_{R}t}e^{-i\omega_{R}\tilde{c}^{\dagger}\tilde{c}t}=e^{i\omega_{R}t}(\tilde{c}+i(\omega_{R}t)[\tilde{c}^{\dagger}\tilde{c},\tilde{c}]+\frac{(i\omega_{R}t)^{2}}{2!}[\tilde{c}^{\dagger}\tilde{c},[\tilde{c}^{\dagger}\tilde{c},\tilde{c}]]+...)=e^{i\omega_{R}t}(\tilde{c}-i(\omega_{R}t)\tilde{c}+\frac{(i\omega_{R}t)^{2}}{2!}\tilde{c}-...)=e^{i\omega_{R}t}\tilde{c}e^{-i\omega_{R}t}=\tilde{c}$
-\end_inset
-
- and conjugate term follows similarly.
- After unitary transformations of the original Hamiltonian, we can write
- 
+Using first quantized form of the Hamiltonian, we can write
 \begin_inset Formula \begin{eqnarray}
-H & = & \sum_{j=1}^{N}\int d{\bf r}\left[\left(\begin{array}{cc}
-\tilde{\psi}_{j\uparrow}^{\dagger}({\bf r}) & \tilde{\psi}_{j\downarrow}^{\dagger}({\bf r})\end{array}\right)\left[\frac{\hat{{\bf k}}^{2}}{2}+k_{r}\hat{k_{z}}\sigma_{jz}+\delta\sigma_{jz}\right]\left(\begin{array}{c}
-\tilde{\psi}_{j\uparrow}({\bf r})\\
-\tilde{\psi}_{j\downarrow}({\bf r})\end{array}\right)+\frac{\Omega}{2\sqrt{V}}\left(\tilde{\psi}_{j\uparrow}^{\dagger}({\bf r})\tilde{\psi}_{j\downarrow}({\bf r})c+c.c\right)\right]+\delta_{R}c^{\dagger}c\label{eq:H2-1}\end{eqnarray}
+H & = & \delta_{R}c^{\dagger}c+\sum_{j=1}^{N}\left[h_{\uparrow}({\bf k}_{j})+h_{\downarrow}({\bf k}_{j})+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(\sigma_{j}^{+}c+c^{\dagger}\sigma_{j}^{-}\right)\right]\label{eq:H4}\end{eqnarray}
 
 \end_inset
 
@@ -156,46 +104,19 @@ where
 \begin_inset Formula $\delta_{R}=\omega_{c}-\omega_{R}$
 \end_inset
 
- which comes from time derivative of 
-\begin_inset Formula $U$
-\end_inset
-
- and we have neglected constant energy 
-\begin_inset Formula $\frac{\hbar^{2}k_{r}^{2}}{2m}$
-\end_inset
-
- and incorprated energy shift of two-photon detunning into 
-\begin_inset Formula $\delta$
-\end_inset
-
-.
- Writing the operator in momentum space, we write 
-\begin_inset Formula $\tilde{\psi}_{j\sigma}({\bf r})=\frac{V}{(2\pi)^{3}}\int d{\bf k}e^{i{\bf k}\cdot{\bf r}}\hat{\psi}_{j\sigma}({\bf k})$
-\end_inset
-
- and Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:H2-1"
-
-\end_inset
-
- is reduced to,
-\begin_inset Formula \begin{eqnarray}
-H & = & \delta_{R}c^{\dagger}c+\sum_{j=1}^{N}\sum_{{\bf k}}\left[\left(h_{1}({\bf k})|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\uparrow|+h_{2}({\bf k})|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\downarrow|\right)+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\downarrow|c+c^{\dagger}|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\uparrow|\right)\right]\label{eq:H4}\end{eqnarray}
-
-\end_inset
-
-where 
-\begin_inset Formula $h_{1}({\bf k})=\frac{\hbar^{2}{\bf k}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta$
+ and 
+\begin_inset Formula $h_{\uparrow}({\bf k})=\frac{\hbar^{2}{\bf k}^{2}}{2m}+\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta$
 \end_inset
 
  and 
-\begin_inset Formula $h_{2}({\bf k})=\frac{\hbar^{2}{\bf k}^{2}}{2m}-\frac{\hbar^{2}}{m}k_{r}k_{z}-\delta$
+\begin_inset Formula $h_{\downarrow}({\bf k})=\frac{\hbar^{2}{\bf k}^{2}}{2m}-\frac{\hbar^{2}}{m}k_{r}k_{z}-\delta$
 \end_inset
 
-.
+, 
+\begin_inset Formula $\sigma_{j}^{\pm}$
+\end_inset
+
+ are raising and lowering operators for the j-th particle's spin state.
  The thermodynamic functions can be calculated from the canonical partition
  function, 
 \begin_inset Formula $Z(N,T)=\text{Tr}[e^{-\beta H}]$
@@ -228,18 +149,18 @@ where atomic field is denoted by atom index
 .
  It follows then that the expectation value becomes,
 \begin_inset Formula \begin{equation}
-\langle\alpha|e^{-\beta H}|\alpha\rangle=\exp\left\{ -\beta\delta_{R}|\alpha|^{2}-\beta\sum_{j=1}^{N}\sum_{{\bf k}}h_{j}({\bf k})\right\} \end{equation}
+\langle\alpha|e^{-\beta H}|\alpha\rangle=\exp\left\{ -\beta\delta_{R}|\alpha|^{2}-\beta\sum_{j=1}^{N}h({\bf k}_{j})\right\} \end{equation}
 
 \end_inset
 
 
 \begin_inset Formula \begin{equation}
-h_{j}({\bf k})=\left(h_{1}({\bf k})|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\uparrow|+h_{2}({\bf k})|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\downarrow|\right)+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\downarrow|c+c^{\dagger}|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\uparrow|\right)\end{equation}
+h({\bf k}_{j})=\left(h_{\uparrow}({\bf k}_{j})|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\uparrow|+h_{\downarrow}({\bf k}_{j})|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\downarrow|\right)+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\left(|{\bf k}_{j}\uparrow\rangle\langle{\bf k}_{j}\downarrow|\alpha+\alpha^{\ast}|{\bf k}_{j}\downarrow\rangle\langle{\bf k}_{j}\uparrow|\right)\end{equation}
 
 \end_inset
 
  and using the property 
-\begin_inset Formula $[h_{i}({\bf k}),h_{j}({\bf k}')]=0$
+\begin_inset Formula $[h({\bf k}_{i}),h({\bf k}_{j})]=0$
 \end_inset
 
 , we can reduce integrand of Eq.
@@ -252,9 +173,9 @@ reference "eq:partitionZ"
 
  to 
 \begin_inset Formula \begin{eqnarray}
-\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle & = & e^{-\beta\delta_{R}|\alpha|^{2}}\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|e^{-\beta\sum_{j=1}^{N}\sum_{{\bf k}}h_{j}({\bf k})}|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle\\
- & = & e^{-\beta\delta_{R}|\alpha|^{2}}\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|\prod_{j=1}^{N}\prod_{{\bf k}=-\infty}^{\infty}e^{-\beta h_{j}({\bf k})}|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle\\
- & = & e^{-\beta\delta_{R}|\alpha|^{2}}\prod_{j=1}^{N}\langle{\bf k}_{j}s_{j}|e^{-\beta h_{j}({\bf k}_{j})}|{\bf k}_{j}s_{j}\rangle\label{eq:reduced}\end{eqnarray}
+\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|\langle\alpha|e^{-\beta H}|\alpha\rangle|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle & = & e^{-\beta\delta_{R}|\alpha|^{2}}\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|e^{-\beta\sum_{j=1}^{N}h({\bf k}_{j})}|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle\\
+ & = & e^{-\beta\delta_{R}|\alpha|^{2}}\langle{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}|\prod_{j=1}^{N}e^{-\beta h({\bf k}_{j})}|{\bf k}_{1}s_{1};...;{\bf k}_{N}s_{N}\rangle\\
+ & = & e^{-\beta\delta_{R}|\alpha|^{2}}\prod_{j=1}^{N}\langle{\bf k}_{j}s_{j}|e^{-\beta h({\bf k}_{j})}|{\bf k}_{j}s_{j}\rangle\label{eq:reduced}\end{eqnarray}
 
 \end_inset
 
@@ -276,10 +197,10 @@ reference "eq:reduced"
 
 , we have
 \begin_inset Formula \begin{eqnarray}
-Z(N,T) & = & \sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}e^{-\beta\delta_{R}|\alpha|^{2}}\left(\prod_{j=1}^{N}\langle{\bf k}_{j}s_{j}|e^{-\beta h_{j}({\bf k}_{j})}|{\bf k}_{j}s_{j}\rangle\right)\\
+Z(N,T) & = & \sum_{s_{1}=\uparrow,\downarrow}...\sum_{s_{N}=\uparrow,\downarrow}\frac{V}{(2\pi)^{3}}\int d{\bf k}_{1}...\frac{V}{(2\pi)^{3}}\int d{\bf k}_{N}\int\frac{d^{2}\alpha}{\pi}e^{-\beta\delta_{R}|\alpha|^{2}}\left(\prod_{j=1}^{N}\langle{\bf k}_{j}s_{j}|e^{-\beta h({\bf k}_{j})}|{\bf k}_{j}s_{j}\rangle\right)\\
  & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\delta_{R}|\alpha|^{2}}\left\{ \frac{V}{(2\pi)^{3}}\int d{\bf k}_{j}\text{Tr}_{\sigma}\exp\left[-\beta\left(\begin{array}{cc}
-h_{1}({\bf k}_{j}) & \frac{\Omega}{2}\frac{1}{\sqrt{V}}\alpha\\
-\frac{\Omega}{2}\frac{1}{\sqrt{V}}\alpha^{\ast} & h_{2}({\bf k}_{j})\end{array}\right)\right]\right\} ^{N}\label{eq:reduced2}\end{eqnarray}
+h_{\uparrow}({\bf k}_{j}) & \frac{\Omega}{2}\frac{1}{\sqrt{V}}\alpha\\
+\frac{\Omega}{2}\frac{1}{\sqrt{V}}\alpha^{\ast} & h_{\downarrow}({\bf k}_{j})\end{array}\right)\right]\right\} ^{N}\label{eq:reduced2}\end{eqnarray}
 
 \end_inset
 
@@ -330,16 +251,21 @@ f(T,\Omega,\omega_{c},\delta)=-\frac{1}{\beta}\lim_{N\rightarrow\infty}\frac{\lo
 \end_layout
 
 \begin_layout Standard
-Although we could take the limit of 
-\begin_inset Formula $N\rightarrow\infty$
-\end_inset
-
- numerically, we shall make use of Laplace's method to further reduce the
- integrals.
+We shall make use of Laplace's method to further reduce the integrals.
  The formal statement of Lapace's method is:
-\end_layout
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Assume that 
 \begin_inset Formula $f(x)$
 \end_inset
@@ -364,6 +290,11 @@ Assume that
 , then
 \begin_inset Formula \begin{equation}
 \lim_{N\rightarrow+\infty}\left(\frac{\int_{a}^{b}e^{Nf(x)}dx}{e^{Nf(x_{0})}\sqrt{\frac{2\pi}{-Nf''(x_{0})}}}\right)=1\end{equation}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -404,103 +335,42 @@ where
 \end_inset
 
 .
- Then
-\begin_inset Formula \begin{equation}
-\phi'(y)=-\beta\delta_{R}+\frac{\beta\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)\frac{\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}}{\mathcal{S}}\end{equation}
-
-\end_inset
-
-Putting 
-\begin_inset Formula $\phi'(y)=0$
-\end_inset
-
- we get an integral equation of 
-\begin_inset Formula $\eta=\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}$
-\end_inset
-
-, and we shall denote 
-\begin_inset Formula $\tilde{\Omega}=\sqrt{N}\Omega\frac{1}{\sqrt{V}}=\sqrt{\rho}\Omega$
-\end_inset
-
- is the Tavis-Cummings coupling constant, an enhancement of coupling strength
- which scales as 
-\begin_inset Formula $\sqrt{N}$
-\end_inset
-
-, but remains finite in the thermodynamic limit that 
-\begin_inset Formula $N\rightarrow\infty$
-\end_inset
-
-, 
-\begin_inset Formula $V\rightarrow\infty$
-\end_inset
-
- such that 
-\begin_inset Formula $\rho=\frac{N}{V}$
-\end_inset
-
- is finite.
- 
-\begin_inset Formula \begin{equation}
-\delta_{R}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\eta)=\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh(\beta\eta)\frac{\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}}{\eta}\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $k_{z}$
-\end_inset
-
- is yet to be integrated out.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-However, numerical evidence show that 
+ We refer the details in the appendix.
+ One representative figure of 
 \begin_inset Formula $\phi(y)$
 \end_inset
 
- is a monotonically decreasing function of 
-\begin_inset Formula $y$
-\end_inset
-
- and maximum is taken at 
-\begin_inset Formula $y_{0}=0$
-\end_inset
-
- which is 
-\begin_inset Formula $\phi(0)=\log\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh\left(\beta(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta)\right)=\log\left(2\sqrt{2\pi/\beta}e^{\beta k_{r}^{2}/2}\cosh(\beta\delta)\right)$
-\end_inset
-
- .
+ function is given here for reference, 
 \end_layout
 
-\end_inset
-
- Then, 
-\begin_inset Formula \begin{eqnarray}
--\beta f(\beta,\tilde{\Omega},\delta_{R},\delta) & = & \lim_{N\rightarrow\infty}\frac{1}{N}\log\left[N\frac{1}{\sqrt{N}}\sqrt{\frac{2\pi}{-\phi''(y_{0})}}\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}\exp\left\{ N\phi(y_{0})\right\} \right]\\
- & = & \lim_{N\rightarrow\infty}\frac{\log\left(\sqrt{N}\sqrt{\frac{2\pi}{-\phi''(y_{0})}}\right)}{N}+\log\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)+\phi(y_{0})\\
- & = & \log\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)+\phi(y_{0})\\
- & = & \log\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)-\beta\delta_{R}y_{0}+\log\int dk_{z}\exp(-\beta\frac{k_{z}^{2}}{2})2\cosh(\beta\sqrt{\left(k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\tilde{\Omega}}{2}\right)^{2}y_{0}})\end{eqnarray}
+\begin_layout Standard
+\begin_inset Graphics
+	filename src/typical.eps
+	scale 50
 
 \end_inset
 
-Second order derivative can be checked straightforwardly, 
-\begin_inset Formula \begin{equation}
-\phi''(y)=\frac{\frac{\partial Q}{\partial y}\mathcal{S}-Q^{2}}{\mathcal{S}^{2}}\end{equation}
+
+\begin_inset Graphics
+	filename src/phase_diagram.eps
+	scale 50
 
 \end_inset
 
-where 
-\begin_inset Formula $Q\equiv\frac{\partial\mathcal{S}}{\partial y}=\beta\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)\frac{\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename src/photon_omega.eps
+	scale 50
+
 \end_inset
 
- and 
-\begin_inset Formula \begin{eqnarray}
-\frac{\partial Q}{\partial y} & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\partial_{y}\left(\frac{\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}\right)\nonumber \\
- & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{4}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\frac{\frac{\beta}{2}\cosh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)-\frac{\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)}{2\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}}{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\\
- & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{4}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\frac{\frac{\beta}{2}\cosh(\beta\eta)-\frac{\sinh(\beta\eta)}{2\eta}}{\eta^{2}}\end{eqnarray}
+
+\begin_inset Graphics
+	filename src/photon_temperature.eps
+	scale 50
 
 \end_inset
 
@@ -527,7 +397,20 @@ k_{r}\sqrt{\hbar/(m\omega)}=\frac{2\pi}{773\times10^{-9}m}\sqrt{\frac{1.05\times
 
 \end_inset
 
-for a rubidium atom.
+for a Rb atom.
+ For K atom, 
+\begin_inset Formula $k_{r}\sim0.33$
+\end_inset
+
+; for Na atom, 
+\begin_inset Formula $k_{r}\sim0.42$
+\end_inset
+
+; for Li atom, 
+\begin_inset Formula $k_{r}\sim0.77$
+\end_inset
+
+.
  Temperature 
 \begin_inset Formula $T$
 \end_inset
@@ -550,10 +433,6 @@ for a rubidium atom.
 
 .
  
-\end_layout
-
-\begin_layout Standard
-
 \color red
 Note, although 
 \begin_inset Formula $\delta_{R}=\omega_{c}-\omega_{R}$
@@ -576,27 +455,10 @@ reference "eq:partitionZ"
  
 \end_layout
 
-\begin_layout Section
-\begin_inset Formula $k_{r}=0$
-\end_inset
-
- physics: BEC and super-radiant phase
-\end_layout
-
 \begin_layout Standard
-When we manually set 
-\begin_inset Formula $k_{r}=0$
-\end_inset
-
-, we have kinetic energy term on top of a Dicke (Tavis-Cummings) Hamiltonian.
- We shall investigate the effect of kinetic energy term, and study potential
- competing phases of Bose-Einstein condensation and super-radiant phase.
-\end_layout
-
-\begin_layout Enumerate
 With the partition function, it is easy to compute the average photon number,
 \begin_inset Formula \begin{eqnarray}
-\langle\frac{a^{\dagger}a}{N}\rangle & = & \frac{\text{Tr}[a^{\dagger}ae^{-\beta H}/N]}{Z(N,T)}\\
+\langle\frac{a^{\dagger}a}{N}\rangle & = & \frac{\text{Tr}[c^{\dagger}ce^{-\beta H}/N]}{Z(N,T)}\\
  & = & \frac{|\alpha|^{2}}{N}\\
  & = & y_{0}\end{eqnarray}
 
@@ -615,10 +477,18 @@ With the partition function, it is easy to compute the average photon number,
 \end_inset
 
 .
- 
+ Here we show average photon number in the parameter space of 
+\begin_inset Formula $T$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ .
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
 If we consider the Hamiltonian without kinetic and SOC term, then 
 \begin_inset Formula \begin{eqnarray}
 Z(N,T) & = & \int\frac{d^{2}\alpha}{\pi}e^{-\beta\delta_{R}|\alpha|^{2}}\left\{ \text{Tr}_{\sigma}\exp\left[-\beta\left(\begin{array}{cc}
@@ -687,7 +557,136 @@ reference "eq:partitionZ_Dicke"
 \end_inset
 
 .
+ (This derivation agrees with the paper PRA 7, 831(1973).
+ Eq.
+ 32)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+\begin_inset Formula $k_{r}=0$
+\end_inset
+
+ physics: BEC and super-radiant phase
+\end_layout
+
+\begin_layout Section
+\begin_inset Formula $k_{r}\neq0$
+\end_inset
+
+ physics: Effect of Spin-Orbit Coupling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Appendix
+\end_layout
+
+\begin_layout Standard
+Then
+\begin_inset Formula \begin{equation}
+\phi'(y)=-\beta\delta_{R}+\frac{\beta\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)\frac{\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}}{\mathcal{S}}\end{equation}
+
+\end_inset
+
+Putting 
+\begin_inset Formula $\phi'(y)=0$
+\end_inset
+
+ we get an integral equation of 
+\begin_inset Formula $\eta=\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}$
+\end_inset
+
+, and we shall denote 
+\begin_inset Formula $\tilde{\Omega}=\sqrt{N}\Omega\frac{1}{\sqrt{V}}=\sqrt{\rho}\Omega$
+\end_inset
+
+ is the Tavis-Cummings coupling constant, an enhancement of coupling strength
+ which scales as 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+, but remains finite in the thermodynamic limit that 
+\begin_inset Formula $N\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $V\rightarrow\infty$
+\end_inset
+
+ such that 
+\begin_inset Formula $\rho=\frac{N}{V}$
+\end_inset
+
+ is finite.
  
+\begin_inset Formula \begin{equation}
+\delta_{R}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})2\cosh(\beta\eta)=\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh(\beta\eta)\frac{\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}}{\eta}\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $k_{z}$
+\end_inset
+
+ is yet to be integrated out.
+ (
+\color red
+Can we study its zero temperature limit of critical 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ value?
+\color inherit
+) Then, 
+\begin_inset Formula \begin{eqnarray}
+-\beta f(\beta,\tilde{\Omega},\delta_{R},\delta) & = & \lim_{N\rightarrow\infty}\frac{1}{N}\log\left[N\frac{1}{\sqrt{N}}\sqrt{\frac{2\pi}{-\phi''(y_{0})}}\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)^{N}\exp\left\{ N\phi(y_{0})\right\} \right]\\
+ & = & \lim_{N\rightarrow\infty}\frac{\log\left(\sqrt{N}\sqrt{\frac{2\pi}{-\phi''(y_{0})}}\right)}{N}+\log\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)+\phi(y_{0})\\
+ & = & \log\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)+\phi(y_{0})\\
+ & = & \log\left(\frac{V}{(2\pi)^{3}}\frac{2\pi m}{\hbar^{2}\beta}\right)-\beta\delta_{R}y_{0}+\log\int dk_{z}\exp(-\beta\frac{k_{z}^{2}}{2})2\cosh(\beta\sqrt{\left(k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\tilde{\Omega}}{2}\right)^{2}y_{0}})\end{eqnarray}
+
+\end_inset
+
+Second order derivative can be checked straightforwardly, 
+\begin_inset Formula \begin{equation}
+\phi''(y)=\frac{\frac{\partial Q}{\partial y}\mathcal{S}-Q^{2}}{\mathcal{S}^{2}}\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $Q\equiv\frac{\partial\mathcal{S}}{\partial y}=\beta\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)\frac{\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}$
+\end_inset
+
+ and 
+\begin_inset Formula \begin{eqnarray}
+\frac{\partial Q}{\partial y} & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\partial_{y}\left(\frac{\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)}{\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}\right)\nonumber \\
+ & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{4}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\frac{\frac{\beta}{2}\cosh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)-\frac{\sinh\left(\beta\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\right)}{2\sqrt{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}}}{\left(\frac{\hbar^{2}}{m}k_{r}k_{z}+\delta\right)^{2}+\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{2}y}\\
+ & = & \beta\left(\frac{\sqrt{N}\Omega}{2}\frac{1}{\sqrt{V}}\right)^{4}\int dk_{z}\exp(-\beta\frac{\hbar^{2}k_{z}^{2}}{2m})\frac{\frac{\beta}{2}\cosh(\beta\eta)-\frac{\sinh(\beta\eta)}{2\eta}}{\eta^{2}}\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+When we manually set 
+\begin_inset Formula $k_{r}=0$
+\end_inset
+
+, we have kinetic energy term on top of a Dicke (Tavis-Cummings) Hamiltonian.
+ We shall investigate the effect of kinetic energy term, and study potential
+ competing phases of Bose-Einstein condensation and super-radiant phase.
 \end_layout
 
 \begin_layout Enumerate
@@ -715,11 +714,9 @@ where
  is chemical potential.
 \end_layout
 
-\begin_layout Section
-\begin_inset Formula $k_{r}\neq0$
 \end_inset
 
- physics: Effect of Spin-Orbit Coupling
+
 \end_layout
 
 \end_body
