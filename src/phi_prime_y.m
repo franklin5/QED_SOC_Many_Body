@@ -1,23 +1,21 @@
 %% This is the program to determine the first order derivative of phi(y)
 clear
 clc
-%close all
-clf
 % units are taken to be \hbar=m=k_B=1
-kr = 0.22;
+kr = 0.77;
 delta = 0.2;
-OmegaTilde = 1.5;
-aOmegaTilde = 0:0.1:5;
-for nOmegaTilde=1:length(aOmegaTilde)
-    OmegaTilde = aOmegaTilde(nOmegaTilde);
+OmegaTilde = 2.3;
+aOmegaTilde = 0:0.1:4;
+%for nOmegaTilde=1:length(aOmegaTilde)
+%   OmegaTilde = aOmegaTilde(nOmegaTilde);
 omega_c = 1; % --> equivalent to delta_R
-aT = 0.005:0.005:0.5;
-%for nT = 1:length(aT)
-%     T = aT(nT);
-T = 0.1;
+aT = 0.01:0.005:1;
+for nT = 1:length(aT)
+     T = aT(nT);
+%T = 0.01;
 beta = 1/T;
 
-maxKZ = 10;
+maxKZ = 5;
 
 eta = @(kz,y) sqrt((kr*kz+delta).^2+(OmegaTilde/2)^2*y);
 S = @(y) quadgk(@(kz) exp(-beta*kz.^2/2)*2.*cosh(beta*eta(kz,y)),-maxKZ,maxKZ);
@@ -63,28 +61,28 @@ phi = @(y) -beta*omega_c*y+log(S(y));
 % end
 % hold off
 
-%     if y0>0
-%         ay0(nT) = y0;
-%     else
-%         ay0(nT) = 0;
-%     end
-%  end
-% figure(3)
-% plot(aT,ay0,'r','linewidth',2)
-% set(gca,'fontsize',16)
-% xlabel('Temperature')
-% ylabel('average photon number')
-% title(['Tavis Cummings \Omega = ',num2str(OmegaTilde)])
-
- if y0>0
-        ay0(nOmegaTilde) = y0;
+    if y0>0
+        ay0(nT) = y0;
     else
-        ay0(nOmegaTilde) = 0;
+        ay0(nT) = 0;
     end
-end
+ end
 figure(3)
-plot(aOmegaTilde,ay0,'b','linewidth',2)
+plot(aT,ay0,'b','linewidth',2)
 set(gca,'fontsize',16)
-xlabel('\Omega')
+xlabel('Temperature')
 ylabel('average photon number')
-title(['k_BT = ',num2str(T)])
+title(['Tavis Cummings \Omega = ',num2str(OmegaTilde)])
+
+%  if y0>0
+%         ay0(nOmegaTilde) = y0;
+%     else
+%         ay0(nOmegaTilde) = 0;
+%     end
+% end
+% 
+% plot(aOmegaTilde,ay0,'b','linewidth',2)
+% set(gca,'fontsize',16)
+% xlabel('\Omega')
+% ylabel('average photon number')
+% title(['k_BT = ',num2str(T)])
