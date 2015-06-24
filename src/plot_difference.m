@@ -16,15 +16,9 @@
 %% Plotting the phase boundary in two cases
 clear
 clc
-close all
-load phase_diagram.mat 
+%close all
+load phase_diagram_kr_0.77.mat 
 photonkr = photon;
-clear photon
-load phase_diagram_kr_0.mat
-photon0 = photon;
-clear photon
-load phase_diagram_delta_0.mat
-photonD = photon;
 clear photon
 %
 % Tckr = zeros(1,length(aO));
@@ -68,6 +62,9 @@ for nT = 1:length(aT)
     end
 end            
 %
+load phase_diagram_kr_0.mat
+photon0 = photon;
+clear photon
 Ock0 = zeros(1,length(aT));
 for nT = 1:length(aT)
     T = aT(nT);
@@ -79,6 +76,10 @@ for nT = 1:length(aT)
         end
     end
 end 
+%
+load phase_diagram_delta_0.mat
+photonD = photon;
+clear photon
 OckD = 100*ones(1,length(aT));
 for nT = 1:length(aT)
     T = aT(nT);
@@ -90,10 +91,24 @@ for nT = 1:length(aT)
         end
     end
 end 
-figure(2)
+load phase_diagram_kr_0_delta_0.01.mat
+photonkr0D0 = photon;
+clear photon
+Ockkr0D0 = 100*ones(1,length(aT));
+for nT = 1:length(aT)
+    T = aT(nT);
+    for nO = 1:length(aO)
+        OmegaTilde = aO(nO);
+        if photonkr0D0(nO,nT)>0
+            Ockkr0D0(nT) = OmegaTilde;
+            break;
+        end
+    end
+end 
+figure(3)
 set(gca,'fontsize',16)
-plot(aT,Ockr,'ro',aT,Ock0,'b',aT,OckD,'k.')
-xlabel('k_B T_c')
+plot(aT,Ockr,'r.',aT,Ock0,'b.',aT,OckD,'k.',aT,Ockkr0D0,'m.','MarkerSize',15)
+xlabel('k_B T')
 ylabel('\Omega_c/\omega')
-legend('k_r=0.22','k_r=0','Dicke')
+legend('k_r=0.77, \delta=0.2','k_r=0, \delta=0.2','k_r=0.22, \delta=0', 'k_r=0, \delta=0')
 axis([0 max(aT) 0 3])

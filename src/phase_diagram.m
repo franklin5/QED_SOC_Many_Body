@@ -5,9 +5,9 @@ clc
 %close all
 clf
 % units are taken to be \hbar=m=k_B=1
-kr = 0.22;
-delta = 0;
-aO = 0.01:0.03:3;
+kr = 0.77;
+delta = 0.2;
+aO = 0.01:0.04:4;
 aT = 0.01:0.01:1; 
 for nO = 1:length(aO)
     OmegaTilde = aO(nO);
@@ -16,7 +16,7 @@ for nT = 1:length(aT)
 T = aT(nT);
 beta = 1/T;
 
-maxKZ = 10;
+maxKZ = 5;
 
 eta = @(kz,y) sqrt((kr*kz+delta).^2+(OmegaTilde/2)^2*y);
 S = @(y) quadgk(@(kz) exp(-beta*kz.^2/2)*2.*cosh(beta*eta(kz,y)),-maxKZ,maxKZ);
@@ -48,7 +48,7 @@ end
 end
 figure(4)
 set(gca,'fontsize',16)
-imagesc(aO,aT,photon')
+mesh(aO,aT,photon')
 xlabel('\Omega/\omega')
 ylabel('k_B T')
 set(gca,'YDir','normal')
@@ -59,5 +59,5 @@ colorbar
 colormap(hot)
 title('photon number')
 % save phase_diagram.mat
-% save phase_diagram_kr_0.mat
-save phase_diagram_delta_0.mat
+ save phase_diagram_kr_0.77.mat
+%save phase_diagram_delta_0.mat
